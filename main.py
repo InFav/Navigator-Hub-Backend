@@ -15,9 +15,11 @@ from dotenv import load_dotenv
 from jwt import PyJWKClient
 import os
 import uvicorn 
-from chatbotlogic import ChatbotLogic 
+from chatbotlogic import ChatbotLogic, ChatbotManager 
 from typing import Optional
 from config.firebase_admin import init_firebase
+import json
+from datetime import datetime, timedelta
 
 
 load_dotenv()
@@ -146,39 +148,106 @@ class UserMessage(BaseModel):
 
 class ChatResponse(BaseModel):
     response: str
-    next_question: Optional[str] = None
+    role: Optional[str] = None
+    completed: Optional[bool] = None
+    phase: Optional[int] = None
+    schedule: Optional[dict] = None
 
-Questions = [
-    "Could you tell me about your current professional role?",
-    "What industries have you worked in?",
-    "What are your key career achievements?",
-    "What are your short-term and long-term career goals?",
-    "What skills are you looking to develop?",
-    "Are you interested in changing industries or roles?",
-    "What motivates you professionally?"
-]
 
-chatbot_logic = ChatbotLogic(Questions)
+def get_chatbot(db: Session = Depends(database.get_db)):
+    return ChatbotLogic(db)
+
 @app.post("/chat", response_model=ChatResponse)
-async def handle_chat(user_message: UserMessage):
-    result = chatbot_logic.process_message(user_message.message)
-    
-    return ChatResponse(
-        response=result["response"],
-        role=result["role"]
-    )
+async def handle_chat(
+    user_message: UserMessage,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        user_id = token_data["uid"]
+        # Get or create chatbot instance for this user
+        chatbot = ChatbotManager.get_instance(user_id, db)
+        
+        result = await chatbot.process_message(message=user_message.message, user_id=user_id)
+        
+        # If chat is completed, clear the instance
+        if result.get("completed"):
+            ChatbotManager.clear_instance(user_id)
+        
+        return ChatResponse(
+            response=result["response"],
+            role=result.get("role"),
+            completed=False if not result.get("completed") else result.get("completed"),
+            phase=result.get("phase", 1)
+        )
+        
+    except Exception as e:
+        print(f"Chat error: {e}")
+        # Clear instance on error to avoid stuck states
+        ChatbotManager.clear_instance(user_id)
+        raise HTTPException(status_code=500, detail=str(e))
 
+# Update WebSocket endpoint as well
 @app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
+async def websocket_endpoint(
+    websocket: WebSocket,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
     await websocket.accept()
     try:
+        user_id = token_data["uid"]
+        chatbot = ChatbotManager.get_instance(user_id, db)
         while True:
             data = await websocket.receive_text()
-            result = chatbot_logic.process_message(data)
+            result = await chatbot.process_message(message=data, user_id=user_id)
+            if result.get("completed"):
+                ChatbotManager.clear_instance(user_id)
             await websocket.send_json(result)
     except Exception as e:
         print(f"WebSocket error: {e}")
+        ChatbotManager.clear_instance(token_data["uid"])
         await websocket.close()
+
+@app.get("/api/schedule/{user_id}")
+async def get_user_schedule(
+    user_id: str,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        if token_data["uid"] != user_id:
+            raise HTTPException(status_code=403, detail="Not authorized to view this schedule")
+            
+        # Get the most recent persona from the new table
+        persona = db.query(models.PersonaInputNew).filter(
+            models.PersonaInputNew.user_id == user_id
+        ).order_by(models.PersonaInputNew.created_at.desc()).first()
+        
+        if not persona:
+            raise HTTPException(status_code=404, detail="No content schedule found")
+            
+        # Get all posts from the new posts table
+        posts = db.query(models.PostNew).filter(
+            models.PostNew.persona_id == persona.id
+        ).order_by(models.PostNew.post_date.asc()).all()
+        
+        formatted_posts = {
+            str(i): {
+                "Post_content": post.post_content,
+                "Post_date": post.post_date.strftime("%Y-%m-%d")
+            }
+            for i, post in enumerate(posts)
+        }
+        
+        return {
+            "persona_id": persona.id,
+            "generated_posts": formatted_posts
+        }
+        
+    except Exception as e:
+        print(f"Error getting schedule: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
