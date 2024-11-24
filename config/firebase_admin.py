@@ -3,6 +3,7 @@ from firebase_admin import credentials
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import json
 
 # Load environment variables
 load_dotenv()
@@ -17,21 +18,18 @@ def init_firebase():
         except ValueError:
             pass  # Not initialized yet, continue with initialization
 
-        # Get the absolute path to the credentials file
-        creds_path = os.getenv('FIREBASE_CREDENTIALS_PATH')
-        if not creds_path:
-            raise ValueError("FIREBASE_CREDENTIALS_PATH not found in environment variables")
+        # Try to get credentials from JSON string first (Heroku)
+        firebase_creds = os.getenv('FIREBASE_CREDENTIALS')
+        if firebase_creds:
+            cred_dict = json.loads(firebase_creds)
+            cred = credentials.Certificate(cred_dict)
+        else:
+            # Fallback to file path (local development)
+            creds_path = os.getenv('FIREBASE_CREDENTIALS_PATH')
+            if not creds_path:
+                raise ValueError("Neither FIREBASE_CREDENTIALS nor FIREBASE_CREDENTIALS_PATH found")
+            cred = credentials.Certificate(creds_path)
 
-        # Convert to absolute path if relative
-        creds_path = Path(creds_path).resolve()
-
-        if not creds_path.exists():
-            raise FileNotFoundError(f"Firebase credentials file not found at {creds_path}")
-
-        print(f"Initializing Firebase with credentials from: {creds_path}")
-        
-        # Initialize the app
-        cred = credentials.Certificate(str(creds_path))
         default_app = firebase_admin.initialize_app(cred)
         print("Firebase Admin SDK initialized successfully")
         return default_app
