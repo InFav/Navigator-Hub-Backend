@@ -33,7 +33,8 @@ init_firebase()
 
 
 origins = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://navigatorhub.netlify.app"
 ]
 
 app.add_middleware(
