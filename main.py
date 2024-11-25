@@ -168,14 +168,23 @@ async def handle_chat(
 ):
     try:
         user_id = token_data["uid"]
-        print(f"Processing chat message for user {user_id}")
+        print(f"Processing chat for user: {user_id}")
+        print(f"Message received: {user_message.message}")
         
-        # Get or create chatbot instance with user_id
+        # Get chatbot instance
         chatbot = ChatbotManager.get_instance(user_id, db)
-        print(f"Processing message with phase: {chatbot.current_phase}, index: {chatbot.current_question_index}")
+        print(f"Chatbot instance created. Phase: {chatbot.current_phase}")
         
-        result = await chatbot.process_message(message=user_message.message, user_id=user_id)
-        print(f"Chat result: {result}")
+        # Process message
+        try:
+            result = await chatbot.process_message(message=user_message.message, user_id=user_id)
+            print(f"Message processed. Result: {result}")
+        except Exception as chat_error:
+            print(f"Error processing chat message: {str(chat_error)}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Chat processing error: {str(chat_error)}"
+            )
         
         return ChatResponse(
             response=result["response"],
@@ -186,8 +195,29 @@ async def handle_chat(
         )
         
     except Exception as e:
-        print(f"Chat error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"Chat endpoint error: {str(e)}")
+        # Log full error details
+        import traceback
+        print(f"Full error traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Server error: {str(e)}"
+        )
+
+# Add this to main.py for testing
+@app.get("/test-db")
+async def test_db(db: Session = Depends(database.get_db)):
+    try:
+        # Try to make a simple query
+        result = db.execute("SELECT 1").scalar()
+        return {"status": "Database connected", "test_query": result}
+    except Exception as e:
+        print(f"Database error: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Database error: {str(e)}"
+        )
+
 
 # Update WebSocket endpoint as well
 @app.websocket("/ws")
