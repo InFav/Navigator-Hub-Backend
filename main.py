@@ -34,7 +34,8 @@ init_firebase()
 
 origins = [
     "http://localhost:5173",
-    "https://navigatorhub.netlify.app"
+    "https://navigatorhub.netlify.app",
+    "https://navhub-backend-3bcc3222593e.herokuapp.com"
 ]
 
 app.add_middleware(
