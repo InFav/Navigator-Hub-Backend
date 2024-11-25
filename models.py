@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, ARRAY, Text, text, ForeignKey
+from sqlalchemy import Column, Integer, String, DateTime, ARRAY, Text, text, ForeignKey, JSON, Boolean
 from database import Base
 from datetime import datetime
 from sqlalchemy.sql import func
@@ -87,3 +87,15 @@ class ChatHistory(Base):
     message = Column(Text, nullable=False)
     sender = Column(String, nullable=False)  # 'user' or 'bot'
     created_at = Column(DateTime, default=datetime.utcnow)
+
+class ChatState(Base):
+    __tablename__ = "chat_states"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String, unique=True, index=True)
+    current_phase = Column(Integer)
+    current_question_index = Column(Integer)
+    user_profile = Column(JSON)
+    completed = Column(Boolean, default=False)
+    created_at = Column(DateTime, default=func.now())
+    updated_at = Column(DateTime, default=func.now(), onupdate=func.now())

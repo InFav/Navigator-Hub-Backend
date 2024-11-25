@@ -168,26 +168,25 @@ async def handle_chat(
 ):
     try:
         user_id = token_data["uid"]
-        # Get or create chatbot instance for this user
+        print(f"Processing chat message for user {user_id}")
+        
+        # Get or create chatbot instance with user_id
         chatbot = ChatbotManager.get_instance(user_id, db)
+        print(f"Processing message with phase: {chatbot.current_phase}, index: {chatbot.current_question_index}")
         
         result = await chatbot.process_message(message=user_message.message, user_id=user_id)
-        
-        # If chat is completed, clear the instance
-        if result.get("completed"):
-            ChatbotManager.clear_instance(user_id)
+        print(f"Chat result: {result}")
         
         return ChatResponse(
             response=result["response"],
             role=result.get("role"),
-            completed=False if not result.get("completed") else result.get("completed"),
-            phase=result.get("phase", 1)
+            completed=result.get("completed", False),
+            phase=result.get("phase", 1),
+            schedule=result.get("schedule")
         )
         
     except Exception as e:
         print(f"Chat error: {e}")
-        # Clear instance on error to avoid stuck states
-        ChatbotManager.clear_instance(user_id)
         raise HTTPException(status_code=500, detail=str(e))
 
 # Update WebSocket endpoint as well

@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 from datetime import datetime, timedelta
 import json
+from models import ChatState, ChatHistory
 
 load_dotenv()
 
@@ -11,19 +12,30 @@ class ChatbotManager:
     
     @classmethod
     def get_instance(cls, user_id: str, db) -> 'ChatbotLogic':
-        if user_id not in cls._instances:
-            cls._instances[user_id] = ChatbotLogic(db)
-        return cls._instances[user_id]
-    
-    @classmethod
-    def clear_instance(cls, user_id: str):
-        if user_id in cls._instances:
-            del cls._instances[user_id]
+        # Create new instance every time but load state from database
+        return ChatbotLogic(db, user_id)
+
 
 
 class ChatbotLogic:
-    def __init__(self, db):
+    def __init__(self, db, user_id: str):
         self.db = db
+        self.user_id = user_id
+        
+        # Load or initialize state
+        chat_state = self.load_chat_state()
+        if chat_state:
+            self.current_phase = chat_state.current_phase
+            self.current_question_index = chat_state.current_question_index
+            self.user_profile = chat_state.user_profile or {}
+            self.completed = chat_state.completed
+        else:
+            self.current_phase = 1
+            self.current_question_index = 0
+            self.user_profile = {}
+            self.completed = False
+            self.save_chat_state()  # Save initial state
+        
         api_key = os.getenv('GOOGLE_API_KEY')
         if not api_key:
             raise ValueError("No Google API key found")
@@ -55,16 +67,37 @@ class ChatbotLogic:
             "What's your preferred timeline for these posts? (1-4 weeks)"
         ]
 
-        self.current_phase = 1
-        self.current_question_index = 0
-        self.user_profile = {}
-        #self.conversation_history = []
-        #self.role_assigned = False
-        self.waiting_for_answer = True 
-        self.last_question_asked = None
+    def load_chat_state(self):
+        return (self.db.query(ChatState)
+                .filter(ChatState.user_id == self.user_id)
+                .first())
+
+    def save_chat_state(self):
+        chat_state = self.load_chat_state()
+        
+        if not chat_state:
+            chat_state = ChatState(
+                user_id=self.user_id,
+                current_phase=self.current_phase,
+                current_question_index=self.current_question_index,
+                user_profile=self.user_profile,
+                completed=self.completed
+            )
+            self.db.add(chat_state)
+        else:
+            chat_state.current_phase = self.current_phase
+            chat_state.current_question_index = self.current_question_index
+            chat_state.user_profile = self.user_profile
+            chat_state.completed = self.completed
+        
+        try:
+            self.db.commit()
+        except Exception as e:
+            self.db.rollback()
+            print(f"Error saving chat state: {e}")
+            raise
 
     def save_chat_history(self, user_id: str, message: str, sender: str):
-        from models import ChatHistory
         chat_history = ChatHistory(
             user_id=user_id,
             message=message,
@@ -74,25 +107,28 @@ class ChatbotLogic:
         self.db.commit()
 
     async def process_message(self, message: str, user_id: str) -> dict:
-        # First, save the user's message
-        self.save_chat_history(user_id, message, 'user')
-        
         try:
+            # Save user message
+            self.save_chat_history(user_id, message, 'user')
+            
             if self.current_phase == 1:
                 result = await self.process_phase1_message(message, user_id)
             else:
                 result = await self.process_phase2_message(message, user_id)
-                
-            # Only save bot's response if it's different from the last question
-            if result.get("response") and result.get("response") != self.last_question_asked:
+            
+            # Save bot response
+            if result.get("response"):
                 self.save_chat_history(user_id, result["response"], 'bot')
-                self.last_question_asked = result["response"]
-                
+            
+            # Update state
+            if result.get("completed"):
+                self.completed = True
+            self.save_chat_state()
+            
             return result
             
         except Exception as e:
             print(f"Error processing message: {e}")
-            ChatbotManager.clear_instance(user_id)  # Clear instance on error
             raise
 
     def determine_role(self, profile_summary: str) -> str:
