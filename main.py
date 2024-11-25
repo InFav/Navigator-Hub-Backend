@@ -5,7 +5,7 @@ import jwt
 from sqlalchemy.orm import Session
 from firebase_admin import auth, credentials, initialize_app
 import firebase_admin
-
+from sqlalchemy import text
 import database 
 import models
 from typing import Optional
@@ -204,12 +204,10 @@ async def handle_chat(
             detail=f"Server error: {str(e)}"
         )
 
-# Add this to main.py for testing
 @app.get("/test-db")
 async def test_db(db: Session = Depends(database.get_db)):
     try:
-        # Try to make a simple query
-        result = db.execute("SELECT 1").scalar()
+        result = db.execute(text("SELECT 1")).scalar()
         return {"status": "Database connected", "test_query": result}
     except Exception as e:
         print(f"Database error: {str(e)}")
