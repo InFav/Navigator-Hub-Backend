@@ -172,33 +172,41 @@ async def handle_chat(
         print(f"Message received: {user_message.message}")
         
         # Get chatbot instance
-        chatbot = ChatbotManager.get_instance(user_id, db)
-        print(f"Chatbot instance created. Phase: {chatbot.current_phase}")
+        try:
+            chatbot = ChatbotManager.get_instance(user_id, db)
+            print(f"Chatbot instance created. Phase: {chatbot.current_phase}")
+            print(f"Current user_profile: {chatbot.user_profile}")
+        except Exception as e:
+            print(f"Error creating chatbot instance: {e}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error initializing chat: {str(e)}"
+            )
         
         # Process message
         try:
             result = await chatbot.process_message(message=user_message.message, user_id=user_id)
             print(f"Message processed. Result: {result}")
+            return ChatResponse(
+                response=result["response"],
+                role=result.get("role"),
+                completed=result.get("completed", False),
+                phase=result.get("phase", 1),
+                schedule=result.get("schedule")
+            )
         except Exception as chat_error:
             print(f"Error processing chat message: {str(chat_error)}")
+            import traceback
+            print(f"Full traceback: {traceback.format_exc()}")
             raise HTTPException(
                 status_code=500,
                 detail=f"Chat processing error: {str(chat_error)}"
             )
         
-        return ChatResponse(
-            response=result["response"],
-            role=result.get("role"),
-            completed=result.get("completed", False),
-            phase=result.get("phase", 1),
-            schedule=result.get("schedule")
-        )
-        
     except Exception as e:
         print(f"Chat endpoint error: {str(e)}")
-        # Log full error details
         import traceback
-        print(f"Full error traceback: {traceback.format_exc()}")
+        print(f"Full traceback: {traceback.format_exc()}")
         raise HTTPException(
             status_code=500,
             detail=f"Server error: {str(e)}"

@@ -21,80 +21,94 @@ class ChatbotLogic:
     def __init__(self, db, user_id: str):
         self.db = db
         self.user_id = user_id
-        
-        # Load or initialize state
-        chat_state = self.load_chat_state()
-        if chat_state:
-            self.current_phase = chat_state.current_phase
-            self.current_question_index = chat_state.current_question_index
-            self.user_profile = chat_state.user_profile or {}
-            self.completed = chat_state.completed
-        else:
-            self.current_phase = 1
-            self.current_question_index = 0
-            self.user_profile = {}
-            self.completed = False
-            self.save_chat_state()  # Save initial state
-        
-        api_key = os.getenv('GOOGLE_API_KEY')
-        if not api_key:
-            raise ValueError("No Google API key found")
-        
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
-        
-        self.phase1_questions = [
-            "Could you tell me about your current professional role?",
-            "What are your key career achievements?",
-            "What are your short-term and long-term career goals?",
-            "What skills are you looking to develop?",
-            "Are you interested in changing industries or roles?",
-            "What motivates you professionally?"
-        ]
-        
-        self.phase2_questions = [
-            "What best describes your professional role? (Startup Founder/Early Career Professional/Mid Level Professional/Senior or Executive)",
-            "Where do you currently work?",
-            "What is your main goal for building influence? (Personal Branding/Product Promotions/Specific Topic Expertise)",
-            "Tell me about your career journey.",
-            "What size of companies are you targeting? (10-50/50-100/100-500/500-1000/1000+)",
-            "Which industries are you focusing on?",
-            "Who is your target audience? (Engineers/Researchers/Product Managers/Marketers/Designers)",
-            "Could you share some of your favorite LinkedIn posts that reflect your writing style?",
-            "What posts or content have performed best with your audience?",
-            "How many posts would you like to create? (Choose between 5-10)",
-            "What's the purpose of these posts? (Building up to News/Provide Information/Foster Audience Relationships/Promote Something/Expand your Network)",
-            "What's your preferred timeline for these posts? (1-4 weeks)"
-        ]
+        try:
+            chat_state = self.load_chat_state()
+            if chat_state:
+                self.current_phase = chat_state.current_phase
+                self.current_question_index = chat_state.current_question_index
+                self.user_profile = chat_state.user_profile or {}
+                self.completed = chat_state.completed
+            else:
+                self.current_phase = 1
+                self.current_question_index = 0
+                self.user_profile = {}
+                self.completed = False
+                self.save_chat_state()  
+            
+            api_key = os.getenv('GOOGLE_API_KEY')
+            if not api_key:
+                raise ValueError("No Google API key found")
+            
+            genai.configure(api_key=api_key)
+            self.model = genai.GenerativeModel('gemini-pro')
+            
+            self.phase1_questions = [
+                "Could you tell me about your current professional role?",
+                "What are your key career achievements?",
+                "What are your short-term and long-term career goals?",
+                "What skills are you looking to develop?",
+                "Are you interested in changing industries or roles?",
+                "What motivates you professionally?"
+            ]
+            
+            self.phase2_questions = [
+                "What best describes your professional role? (Startup Founder/Early Career Professional/Mid Level Professional/Senior or Executive)",
+                "Where do you currently work?",
+                "What is your main goal for building influence? (Personal Branding/Product Promotions/Specific Topic Expertise)",
+                "Tell me about your career journey.",
+                "What size of companies are you targeting? (10-50/50-100/100-500/500-1000/1000+)",
+                "Which industries are you focusing on?",
+                "Who is your target audience? (Engineers/Researchers/Product Managers/Marketers/Designers)",
+                "Could you share some of your favorite LinkedIn posts that reflect your writing style?",
+                "What posts or content have performed best with your audience?",
+                "How many posts would you like to create? (Choose between 5-10)",
+                "What's the purpose of these posts? (Building up to News/Provide Information/Foster Audience Relationships/Promote Something/Expand your Network)",
+                "What's your preferred timeline for these posts? (1-4 weeks)"
+            ]
+        except Exception as e:
+            print(f"Error initializing ChatbotLogic: {e}")
+            raise
 
     def load_chat_state(self):
-        return (self.db.query(ChatState)
-                .filter(ChatState.user_id == self.user_id)
-                .first())
+        try:
+            chat_state = (self.db.query(ChatState)
+                        .filter(ChatState.user_id == self.user_id)
+                        .first())
+            
+            if chat_state and chat_state.user_profile:
+                chat_state.user_profile = json.loads(chat_state.user_profile)
+            
+            return chat_state
+        except Exception as e:
+            print(f"Error loading chat state: {e}")
+            return None
 
     def save_chat_state(self):
-        chat_state = self.load_chat_state()
-        
-        if not chat_state:
-            chat_state = ChatState(
-                user_id=self.user_id,
-                current_phase=self.current_phase,
-                current_question_index=self.current_question_index,
-                user_profile=self.user_profile,
-                completed=self.completed
-            )
-            self.db.add(chat_state)
-        else:
-            chat_state.current_phase = self.current_phase
-            chat_state.current_question_index = self.current_question_index
-            chat_state.user_profile = self.user_profile
-            chat_state.completed = self.completed
-        
         try:
+            chat_state = self.load_chat_state()
+            
+            user_profile_json = json.dumps(self.user_profile)
+            
+            if not chat_state:
+                chat_state = ChatState(
+                    user_id=self.user_id,
+                    current_phase=self.current_phase,
+                    current_question_index=self.current_question_index,
+                    user_profile=user_profile_json,  
+                    completed=self.completed
+                )
+                self.db.add(chat_state)
+            else:
+                chat_state.current_phase = self.current_phase
+                chat_state.current_question_index = self.current_question_index
+                chat_state.user_profile = user_profile_json  
+                chat_state.completed = self.completed
+            
             self.db.commit()
         except Exception as e:
             self.db.rollback()
             print(f"Error saving chat state: {e}")
+            print(f"Current user_profile: {self.user_profile}")
             raise
 
     def save_chat_history(self, user_id: str, message: str, sender: str):
