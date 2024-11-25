@@ -24,11 +24,15 @@ class ChatbotLogic:
         try:
             chat_state = self.load_chat_state()
             if chat_state:
+                print(f"Loading existing chat state for user {user_id}")
+
                 self.current_phase = chat_state.current_phase
                 self.current_question_index = chat_state.current_question_index
                 self.user_profile = chat_state.user_profile or {}
                 self.completed = chat_state.completed
             else:
+                print(f"Initializing new chat state for user {user_id}")
+
                 self.current_phase = 1
                 self.current_question_index = 0
                 self.user_profile = {}
@@ -76,39 +80,56 @@ class ChatbotLogic:
                         .first())
             
             if chat_state and chat_state.user_profile:
-                chat_state.user_profile = json.loads(chat_state.user_profile)
-            
+                try:
+                    if isinstance(chat_state.user_profile, str):
+                        chat_state.user_profile = json.loads(chat_state.user_profile)
+                    elif isinstance(chat_state.user_profile, dict):
+                        # Already a dict, no need to parse
+                        pass
+                    else:
+                        print(f"Unexpected user_profile type: {type(chat_state.user_profile)}")
+                        chat_state.user_profile = {}
+                except Exception as e:
+                    print(f"Error parsing user_profile: {e}")
+                    chat_state.user_profile = {}
+                    
             return chat_state
         except Exception as e:
-            print(f"Error loading chat state: {e}")
+            print(f"Error in load_chat_state: {e}")
             return None
 
     def save_chat_state(self):
         try:
             chat_state = self.load_chat_state()
-            
-            user_profile_json = json.dumps(self.user_profile)
+            user_profile_json = json.dumps(self.user_profile) if self.user_profile else '{}'
             
             if not chat_state:
+                # Create new state
                 chat_state = ChatState(
                     user_id=self.user_id,
                     current_phase=self.current_phase,
                     current_question_index=self.current_question_index,
-                    user_profile=user_profile_json,  
+                    user_profile=user_profile_json,
                     completed=self.completed
                 )
                 self.db.add(chat_state)
             else:
+                # Update existing state
                 chat_state.current_phase = self.current_phase
                 chat_state.current_question_index = self.current_question_index
-                chat_state.user_profile = user_profile_json  
+                chat_state.user_profile = user_profile_json
                 chat_state.completed = self.completed
+                chat_state.updated_at = datetime.now()
             
-            self.db.commit()
+            try:
+                self.db.commit()
+            except Exception as e:
+                self.db.rollback()
+                print(f"Error saving chat state: {e}")
+                raise
         except Exception as e:
+            print(f"Error in save_chat_state: {e}")
             self.db.rollback()
-            print(f"Error saving chat state: {e}")
-            print(f"Current user_profile: {self.user_profile}")
             raise
 
     def save_chat_history(self, user_id: str, message: str, sender: str):
