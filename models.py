@@ -99,3 +99,13 @@ class ChatState(Base):
     completed = Column(Boolean, default=False)
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
+
+class Feedback(Base):
+    __tablename__ = "feedback"
+
+    id = Column(Integer, primary_key=True, index=True)
+    rating = Column(Integer)
+    type = Column(String)
+    feedback = Column(Text)
+    user_email = Column(String)
+    timestamp = Column(DateTime, default=datetime.utcnow)
