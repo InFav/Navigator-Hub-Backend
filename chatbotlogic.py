@@ -46,27 +46,23 @@ class ChatbotLogic:
             self.model = genai.GenerativeModel('gemini-pro')
             
             self.phase1_questions = [
-                "Could you tell me about your current professional role?",
-                "What are your key career achievements?",
-                "What are your short-term and long-term career goals?",
-                "What skills are you looking to develop?",
+                "Tell me your name",
+                "What are the highlights of your career journey so far? What are the achievements you are most proud of ? For example: Tell me about an award you won or a project you were recognised for. ",
+                "What are your short and long term goals? Where do you see yourself in 5 years ? What is your ideal role?",
                 "Are you interested in changing industries or roles?",
-                "What motivates you professionally?"
+                "What motivates you to progress professionally? Tell me what makes you excited when you get up in the morning or the key factor behind your hard work. An Example my team has is to build a legacy or financial growth.",
             ]
             
             self.phase2_questions = [
-                "What best describes your professional role? (Startup Founder/Early Career Professional/Mid Level Professional/Senior or Executive)",
-                "Where do you currently work?",
-                "What is your main goal for building influence? (Personal Branding/Product Promotions/Specific Topic Expertise)",
-                "Tell me about your career journey.",
-                "What size of companies are you targeting? (10-50/50-100/100-500/500-1000/1000+)",
-                "Which industries are you focusing on?",
-                "Who is your target audience? (Engineers/Researchers/Product Managers/Marketers/Designers)",
-                "Could you share some of your favorite LinkedIn posts that reflect your writing style?",
-                "What posts or content have performed best with your audience?",
-                "How many posts would you like to create? (Choose between 5-10)",
-                "What's the purpose of these posts? (Building up to News/Provide Information/Foster Audience Relationships/Promote Something/Expand your Network)",
-                "What's your preferred timeline for these posts? (1-4 weeks)"
+                "1 / 9 What best describes your professional role? Example: Startup Founder, Early Career Professional, Mid Level Professional, Senior or Executive.",
+                "2 / 9 Tell me about your career journey (You can copy and paste your LinkedIn Description here, if you’d like a shortcut). Examples of things to include: your current role, the previous kind of projects you have done or the path you took to be where you are right now. The more information the better!",
+                "3 / 9 We are going to get deeper into the Strategy of targeting the type of audience you want to capture. That is, what size of companies would you prefer most of the audience come from, who get impacted by your content  (10-50/ 50-100/ 100-500/ 500-1000/ 1000+)",
+                "4 / 9 What is your focus industry for building influence, that is, what industry would you like most if your audience members to come from?",
+                "5 / 9  Could you share some of your favorite LinkedIn posts or writing samples that reflect your writing style the most? Please copy and paste the post text, no links please– I get confused with links haha.",
+                "6 / 9 What posts or content have performed best with your audience? This could be something you wrote or read that seem to have gotten a lot of traction with the audience members you’d like to influence. Please copy and past the post text, no links– I get confused with links haha",
+                "7 / 9 How many posts would you like to create for your first LinkedIn post series by Coco from NavHub? (Choose between 5-10)",
+                "8 / 9 What's the purpose of this specific first LinkedIn post series we will be launching today? (Examples: Building up to a News, Provide Information, Foster Audience Relationships, Promote Something, Expand your Network)",
+                "9 / 9 What's your preferred timeline for these posts, aka, how long would you like this inaugural series for building your strategic influence, to last? (1-4 weeks)",
             ]
         except Exception as e:
             print(f"Error initializing ChatbotLogic: {e}")
@@ -204,7 +200,7 @@ class ChatbotLogic:
                 profile_summary = self.model.generate_content(summary_prompt).text
                 role = self.determine_role(profile_summary)
                 
-                transition_response = f"Thank you for sharing your professional journey. Based on your responses, you would be an excellent {role}. Now, as your personal branding assistant, I want to dig deeper into the audience demographics that you want to target for your personal influence goals. It’s crucial for us to be strategic and authentic, and I will continue to convert your notes on lessons learnt in the growth journey plans at Navigator Hub, into personal influence content on the Content calendar that strategically targets this audience, and incorporates your unique writing style and more. Let’s get started with Target Audience questions."
+                transition_response = f"Thank you for sharing your professional journey. Your growth so far sounds inspiring!  You seem to be in an ideal position to be a great {role}. I have a few more questions to know more about your style, so that we can build your content with authenticity."
                 first_content_question = self.phase2_questions[0]
                 response = f"{transition_response}\n\n{first_content_question}"
                 
@@ -256,7 +252,7 @@ class ChatbotLogic:
             else:
                 try:
                     content_schedule = await self.generate_content_schedule(user_id)
-                    final_response = "Great! I've created your content schedule based on our discussion. Redirecting you to your content calendar..."
+                    final_response = "Thank you for sharing all that information! I've created your content schedule based on our discussion. As we grow together in this Chat Room, I will continue to convert your learning notes and stories from going through the recommended Achievement Plan, into influential growth journeys on the Strategic Content Calendar. "
                     
                     return {
                         "response": final_response,
