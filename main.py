@@ -5,7 +5,7 @@ import jwt
 from sqlalchemy.orm import Session
 from firebase_admin import auth, credentials, initialize_app
 import firebase_admin
-
+from sqlalchemy import text
 import database 
 import models
 from typing import Optional
@@ -20,6 +20,11 @@ from typing import Optional
 from config.firebase_admin import init_firebase
 import json
 from datetime import datetime, timedelta
+import google.generativeai as genai
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
+from pydantic import BaseModel, EmailStr
+from datetime import datetime
+from models import Feedback
 
 
 load_dotenv()
@@ -34,7 +39,11 @@ init_firebase()
 
 origins = [
     "http://localhost:5173",
-    "https://navigatorhub.netlify.app"
+    "https://navigatorhub.netlify.app",
+    "http://navigatorhub.netlify.app",
+    "https://navhub-backend-3bcc3222593e.herokuapp.com",
+    "https://navhub.ai",
+    "http://navhub.ai"
 ]
 
 app.add_middleware(
@@ -52,6 +61,26 @@ class UserCreate(BaseModel):
     uid: str
     name: Optional[str] = None
     picture: Optional[str] = None
+
+class FeedbackCreate(BaseModel):
+    rating: int
+    type: str
+    feedback: str
+    userEmail: Optional[str]
+    timestamp: str
+
+# Email configuration
+mail_config = ConnectionConfig(
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME"),
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD"),
+    MAIL_FROM = os.getenv("MAIL_FROM"),
+    MAIL_PORT = 587,
+    MAIL_SERVER = "smtp.gmail.com",
+    MAIL_STARTTLS = True,
+    MAIL_SSL_TLS = False,
+    USE_CREDENTIALS = True,
+    VALIDATE_CERTS = True
+)
 
 async def verify_firebase_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
     try:
@@ -166,27 +195,62 @@ async def handle_chat(
 ):
     try:
         user_id = token_data["uid"]
-        # Get or create chatbot instance for this user
-        chatbot = ChatbotManager.get_instance(user_id, db)
+        print(f"Processing chat for user: {user_id}")
+        print(f"Message received: {user_message.message}")
         
-        result = await chatbot.process_message(message=user_message.message, user_id=user_id)
+        # Get chatbot instance
+        try:
+            chatbot = ChatbotManager.get_instance(user_id, db)
+            print(f"Chatbot instance created. Phase: {chatbot.current_phase}")
+            print(f"Current user_profile: {chatbot.user_profile}")
+        except Exception as e:
+            print(f"Error creating chatbot instance: {e}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error initializing chat: {str(e)}"
+            )
         
-        # If chat is completed, clear the instance
-        if result.get("completed"):
-            ChatbotManager.clear_instance(user_id)
-        
-        return ChatResponse(
-            response=result["response"],
-            role=result.get("role"),
-            completed=False if not result.get("completed") else result.get("completed"),
-            phase=result.get("phase", 1)
-        )
+        # Process message
+        try:
+            result = await chatbot.process_message(message=user_message.message, user_id=user_id)
+            print(f"Message processed. Result: {result}")
+            return ChatResponse(
+                response=result["response"],
+                role=result.get("role"),
+                completed=result.get("completed", False),
+                phase=result.get("phase", 1),
+                schedule=result.get("schedule")
+            )
+        except Exception as chat_error:
+            print(f"Error processing chat message: {str(chat_error)}")
+            import traceback
+            print(f"Full traceback: {traceback.format_exc()}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Chat processing error: {str(chat_error)}"
+            )
         
     except Exception as e:
-        print(f"Chat error: {e}")
-        # Clear instance on error to avoid stuck states
-        ChatbotManager.clear_instance(user_id)
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"Chat endpoint error: {str(e)}")
+        import traceback
+        print(f"Full traceback: {traceback.format_exc()}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Server error: {str(e)}"
+        )
+
+@app.get("/test-db")
+async def test_db(db: Session = Depends(database.get_db)):
+    try:
+        result = db.execute(text("SELECT 1")).scalar()
+        return {"status": "Database connected", "test_query": result}
+    except Exception as e:
+        print(f"Database error: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Database error: {str(e)}"
+        )
+
 
 # Update WebSocket endpoint as well
 @app.websocket("/ws")
@@ -209,6 +273,89 @@ async def websocket_endpoint(
         print(f"WebSocket error: {e}")
         ChatbotManager.clear_instance(token_data["uid"])
         await websocket.close()
+
+@app.post("/api/posts/{persona_id}/{post_index}/regenerate")
+async def regenerate_post(
+    persona_id: int,
+    post_index: int,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        persona = db.query(models.PersonaInputNew).filter(
+            models.PersonaInputNew.id == persona_id
+        ).first()
+        
+        if not persona:
+            raise HTTPException(status_code=404, detail="Persona not found")
+        
+        posts = db.query(models.PostNew).filter(
+            models.PostNew.persona_id == persona_id
+        ).order_by(models.PostNew.post_date.asc()).all()
+        
+        if not posts or post_index >= len(posts):
+            raise HTTPException(status_code=404, detail="Post not found")
+            
+        post = posts[post_index]
+            
+        api_key = os.getenv('GOOGLE_API_KEY')
+        if not api_key:
+            raise ValueError("No Google API key found")
+        
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel('gemini-pro')
+        
+        prompt = f"""
+        Generate a new LinkedIn post for a {persona.profession} who works at {persona.current_work}.
+        Their goal is {persona.goal}.
+        Target audience: {persona.target_type}
+        Industry focus: {persona.industry_target}
+        Purpose: {persona.post_purpose}
+
+        Requirements:
+        1. Length: 200-400 characters
+        2. Include engaging content
+        3. Add 2-3 relevant hashtags at the end
+        4. Make it professional and unique
+        5. Keep consistent tone with target audience
+        
+        [POST START]
+        Generate post here...
+        [POST END]
+        """
+        
+        response = model.generate_content(prompt).text
+        
+        if '[POST START]' in response and '[POST END]' in response:
+            new_content = response.split('[POST START]')[1].split('[POST END]')[0].strip()
+        else:
+            new_content = response.strip()
+        
+        post.post_content = new_content
+        post.regenerate_clicks = (post.regenerate_clicks or 0) + 1
+        db.commit()
+        
+        updated_posts = db.query(models.PostNew).filter(
+            models.PostNew.persona_id == persona_id
+        ).order_by(models.PostNew.post_date.asc()).all()
+        
+        formatted_posts = {
+            str(i): {
+                "Post_content": p.post_content,
+                "Post_date": p.post_date.strftime("%Y-%m-%d")
+            }
+            for i, p in enumerate(updated_posts)
+        }
+        
+        return {
+            "persona_id": persona_id,
+            "generated_posts": formatted_posts
+        }
+        
+    except Exception as e:
+        print(f"Error regenerating post: {e}")
+        db.rollback()
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/schedule/{user_id}")
 async def get_user_schedule(
@@ -248,6 +395,67 @@ async def get_user_schedule(
         
     except Exception as e:
         print(f"Error getting schedule: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+@app.post("/api/feedback")
+async def create_feedback(feedback: FeedbackCreate, db: Session = Depends(database.get_db)):
+    try:
+        # Save to database
+        db_feedback = Feedback(
+            rating=feedback.rating,
+            type=feedback.type,
+            feedback=feedback.feedback,
+            user_email=feedback.userEmail,
+            timestamp=datetime.fromisoformat(feedback.timestamp)
+        )
+        db.add(db_feedback)
+        db.commit()
+
+        # Create email content
+        email_body = f"""
+        New Feedback Received
+        
+        From: {feedback.userEmail or 'Anonymous'}
+        Rating: {feedback.rating}/5
+        Type: {feedback.type}
+        
+        Feedback Message:
+        {feedback.feedback}
+        
+        Time: {feedback.timestamp}
+        """
+
+        admin_message = MessageSchema(
+            subject=f"Navigator Hub Feedback: {feedback.type.title()}",
+            recipients=["hello@navhub.ai", "users.navhub@gmail.com"],
+            body=email_body,
+            subtype="plain"
+        )
+
+        fastmail = FastMail(mail_config)
+        await fastmail.send_message(admin_message)
+
+        if feedback.userEmail:
+            user_message = MessageSchema(
+                subject="Thank you for your feedback - Navigator Hub",
+                recipients=[feedback.userEmail],
+                body=f"""
+                Thank you for your feedback!
+                
+                We've received your {feedback.type} and will review it carefully.
+                
+                Your feedback:
+                {feedback.feedback}
+                
+                Best regards,
+                Navigator Hub Team
+                """,
+                subtype="plain"
+            )
+            await fastmail.send_message(user_message)
+
+        return {"status": "success"}
+    except Exception as e:
+        print(f"Error processing feedback: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
