@@ -42,7 +42,8 @@ origins = [
     "https://navigatorhub.netlify.app",
     "http://navigatorhub.netlify.app",
     "https://navhub-backend-3bcc3222593e.herokuapp.com",
-    "https://navhub.ai/"
+    "https://navhub.ai",
+    "http://navhub.ai"
 ]
 
 app.add_middleware(
