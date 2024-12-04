@@ -16,7 +16,7 @@ from jwt import PyJWKClient
 import os
 import uvicorn 
 from chatbotlogic import ChatbotLogic, ChatbotManager 
-from typing import Optional
+from typing import List
 from config.firebase_admin import init_firebase
 import json
 from datetime import datetime, timedelta
@@ -25,7 +25,7 @@ from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from models import Feedback
-
+from models import ChatState, ChatHistory
 
 load_dotenv()
 
@@ -68,6 +68,12 @@ class FeedbackCreate(BaseModel):
     feedback: str
     userEmail: Optional[str]
     timestamp: str
+
+class ChatHistoryResponse(BaseModel):
+    messages: List[dict]
+
+class RegeneratePostRequest(BaseModel):
+    customPrompt: Optional[str] = None
 
 # Email configuration
 mail_config = ConnectionConfig(
@@ -278,6 +284,7 @@ async def websocket_endpoint(
 async def regenerate_post(
     persona_id: int,
     post_index: int,
+    request: RegeneratePostRequest,
     token_data: dict = Depends(verify_firebase_token),
     db: Session = Depends(database.get_db)
 ):
@@ -305,13 +312,20 @@ async def regenerate_post(
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel('gemini-pro')
         
+        # Base prompt
         prompt = f"""
         Generate a new LinkedIn post for a {persona.profession} who works at {persona.current_work}.
         Their goal is {persona.goal}.
         Target audience: {persona.target_type}
         Industry focus: {persona.industry_target}
         Purpose: {persona.post_purpose}
+        """
 
+        # Add custom prompt if provided
+        if request.customPrompt:
+            prompt += f"\nAdditional requirements: {request.customPrompt}\n"
+
+        prompt += """
         Requirements:
         1. Length: 200-400 characters
         2. Include engaging content
@@ -457,6 +471,86 @@ async def create_feedback(feedback: FeedbackCreate, db: Session = Depends(databa
     except Exception as e:
         print(f"Error processing feedback: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/chat/history/{user_id}", response_model=ChatHistoryResponse)
+async def get_chat_history(
+    user_id: str,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        if token_data["uid"] != user_id:
+            raise HTTPException(
+                status_code=403,
+                detail="Not authorized to view this chat history"
+            )
+        
+        chat_state = db.query(ChatState).filter(
+            ChatState.user_id == user_id
+        ).first()
+        
+        history = db.query(ChatHistory).filter(
+            ChatHistory.user_id == user_id
+        ).order_by(ChatHistory.created_at.asc()).all()
+        
+        messages = [
+            {
+                "text": msg.message,
+                "sender": msg.sender,
+                "timestamp": msg.created_at.isoformat()
+            }
+            for msg in history
+        ]
+        
+        return ChatHistoryResponse(
+            messages=messages
+        )
+        
+    except Exception as e:
+        print(f"Error fetching chat history: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+@app.get("/api/chat/state/{user_id}")
+async def get_chat_state(
+    user_id: str,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        if token_data["uid"] != user_id:
+            raise HTTPException(
+                status_code=403,
+                detail="Not authorized to view this chat state"
+            )
+        
+        chat_state = db.query(ChatState).filter(
+            ChatState.user_id == user_id
+        ).first()
+        
+        if not chat_state:
+            return {
+                "current_phase": 1,
+                "current_question_index": 0,
+                "completed": False,
+                "user_profile": {}
+            }
+            
+        return {
+            "current_phase": chat_state.current_phase,
+            "current_question_index": chat_state.current_question_index,
+            "completed": chat_state.completed,
+            "user_profile": chat_state.user_profile
+        }
+        
+    except Exception as e:
+        print(f"Error fetching chat state: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

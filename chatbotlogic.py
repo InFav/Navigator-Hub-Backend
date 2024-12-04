@@ -140,6 +140,15 @@ class ChatbotLogic:
         try:
             self.save_chat_history(user_id, message, 'user')
             
+            # If chat is already completed, return appropriate response
+            if self.completed:
+                return {
+                    "response": "Your content strategy has already been created. Would you like to create a new one?",
+                    "completed": True,
+                    "phase": self.current_phase,
+                    "schedule": None  # Add schedule if needed
+                }
+                
             if self.current_phase == 1:
                 result = await self.process_phase1_message(message, user_id)
             else:
@@ -153,7 +162,7 @@ class ChatbotLogic:
             self.save_chat_state()
             
             return result
-            
+                
         except Exception as e:
             print(f"Error processing message: {e}")
             raise
