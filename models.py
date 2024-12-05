@@ -109,3 +109,49 @@ class Feedback(Base):
     feedback = Column(Text)
     user_email = Column(String)
     timestamp = Column(DateTime, default=datetime.utcnow)
+
+class NegotiatorInput(Base):
+    __tablename__ = "negotiator_input"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String, nullable=False)
+    desired_skills = Column(ARRAY(String), nullable=False)
+    weekly_hours = Column(Integer, nullable=False)
+    career_dream = Column(Text, nullable=False)
+    current_skills = Column(ARRAY(String), nullable=True)
+    learning_style = Column(String, nullable=False)
+    preferred_resources = Column(ARRAY(String), nullable=False)
+    networking_preferences = Column(String, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+class NegotiatorPlan(Base):
+    __tablename__ = "negotiator_plans"
+
+    id = Column(Integer, primary_key=True, index=True)
+    negotiator_id = Column(Integer, ForeignKey("negotiator_input.id"), nullable=False)
+    plan_type = Column(String, nullable=False)  
+    weekly_hours = Column(Integer, nullable=False)
+    courses = Column(ARRAY(JSON), nullable=False)  
+    connections = Column(ARRAY(JSON), nullable=False)  
+    events = Column(ARRAY(JSON), nullable=False)  
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+class NegotiatorState(Base):
+    __tablename__ = "negotiator_states"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String, unique=True, index=True)
+    current_question_index = Column(Integer, default=0)
+    user_profile = Column(JSON)
+    completed = Column(Boolean, default=False)
+    created_at = Column(DateTime, default=func.now())
+    updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
+
+class NegotiatorHistory(Base):
+    __tablename__ = "negotiator_history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String, nullable=False)
+    message = Column(Text, nullable=False)
+    sender = Column(String, nullable=False)  # 'user' or 'bot'
+    created_at = Column(DateTime, default=datetime.utcnow)

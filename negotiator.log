@@ -1,0 +1,1416 @@
+2024-12-04 22:54:00,471 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:00,472 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:00,554 - NegotiatorChatbot - INFO - No existing state found, initializing new state
+2024-12-04 22:54:00,555 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:00,763 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-04 22:54:00,764 - NegotiatorChatbot - INFO - Processing message - Question index: 0
+2024-12-04 22:54:00,767 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:00,881 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:01,026 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking'}
+2024-12-04 22:54:01,027 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:01,178 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking'}
+2024-12-04 22:54:01,179 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:54:04,374 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:04,374 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:04,467 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking'}
+2024-12-04 22:54:04,468 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 22:54:04,468 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:04,626 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:04,791 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 22:54:04,793 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:04,955 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 22:54:04,955 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:54:17,511 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:17,511 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:17,589 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 22:54:17,590 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 22:54:17,591 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:17,733 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:17,894 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google'}
+2024-12-04 22:54:17,895 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:18,041 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google'}
+2024-12-04 22:54:18,042 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:54:44,043 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:44,044 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:44,126 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google'}
+2024-12-04 22:54:44,127 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 22:54:44,127 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:44,286 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:44,430 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5'}
+2024-12-04 22:54:44,431 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:44,579 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5'}
+2024-12-04 22:54:44,580 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:54:52,001 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:52,001 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:52,099 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5'}
+2024-12-04 22:54:52,100 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 22:54:52,101 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:52,245 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:52,402 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses'}
+2024-12-04 22:54:52,404 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:52,550 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses'}
+2024-12-04 22:54:52,550 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:54:58,429 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:58,429 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:54:58,517 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses'}
+2024-12-04 22:54:58,518 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 22:54:58,519 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:54:58,677 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:58,825 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 22:54:58,825 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:54:58,970 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 22:54:58,972 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 22:55:04,438 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:55:04,438 - NegotiatorChatbot - INFO - Loading state for user: zKcpHsr9vlahQQctFMABYGxhhlx2
+2024-12-04 22:55:04,527 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 22:55:04,528 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 22:55:04,528 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 22:55:04,700 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:55:04,860 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 22:55:04,861 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 22:55:05,017 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML\n2. GEN AI\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'My dream career position is being a CEO at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; Machine Learning - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video Courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 22:55:05,024 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 22:55:05,025 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 22:55:10,640 - NegotiatorChatbot - ERROR - JSON parsing error for achievable plan: Expecting value: line 1 column 1 (char 0)
+2024-12-04 22:55:10,641 - NegotiatorChatbot - ERROR - Raw response: ```json
+{
+  "courses": [
+    {
+      "name": "Applied Machine Learning",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "20 hours"
+    },
+    {
+      "name": "Generative AI: Theory and Practice",
+      "link": "https://www.coursera.org/specializations/generative-ai",
+      "duration": "15 hours"
+    },
+    {
+      "name": "Python for Data Science and Machine Learning Bootcamp",
+      "link": "https://www.coursera.org/specializations/python-data-science",
+      "duration": "25 hours"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Head of Machine Learning",
+      "company": "Google AI",
+      "reason": "Can provide insights into the CEO role and the ML industry at Google."
+    },
+    {
+      "title": "VP of Engineering",
+      "company": "Microsoft",
+      "reason": "Has experience in both applied ML and networking."
+    },
+    {
+      "title": "CEO",
+      "company": "OpenAI",
+      "reason": "Thought leader in Generative AI and can provide unique insights."
+    }
+  ],
+  "events": [
+    {
+      "name": "AI World Conference",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Machine Learning Meetup",
+      "type": "Meetup",
+      "frequency": "Monthly"
+    }
+  ]
+}
+```
+2024-12-04 22:55:10,648 - NegotiatorChatbot - ERROR - Failed to generate plans
+2024-12-04 23:02:47,575 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:02:47,579 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:02:47,665 - NegotiatorChatbot - INFO - No existing state found, initializing new state
+2024-12-04 23:02:47,666 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:02:47,860 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-04 23:02:47,861 - NegotiatorChatbot - INFO - Processing message - Question index: 0
+2024-12-04 23:02:47,861 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:02:47,975 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:02:48,124 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking'}
+2024-12-04 23:02:48,125 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:02:48,278 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking'}
+2024-12-04 23:02:48,278 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:02:58,303 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:02:58,303 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:02:58,385 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking'}
+2024-12-04 23:02:58,385 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 23:02:58,386 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:02:58,553 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:02:58,722 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:02:58,724 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:02:58,878 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:02:58,879 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:03:37,768 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:03:37,768 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:03:37,851 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:03:37,852 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 23:03:37,852 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:03:38,006 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:03:38,177 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google'}
+2024-12-04 23:03:38,178 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:03:38,320 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google'}
+2024-12-04 23:03:38,322 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:03:55,804 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:03:55,805 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:03:55,882 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google'}
+2024-12-04 23:03:55,883 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 23:03:55,883 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:03:56,029 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:03:56,173 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5'}
+2024-12-04 23:03:56,174 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:03:56,316 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5'}
+2024-12-04 23:03:56,317 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:04:00,029 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:00,030 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:00,115 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5'}
+2024-12-04 23:04:00,116 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 23:04:00,117 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:04:00,265 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:00,409 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:04:00,410 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:00,561 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:04:00,563 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:04:04,266 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:04,267 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:04,354 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:04:04,354 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 23:04:04,354 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:04:04,534 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:04,705 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:04:04,706 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:04,849 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:04:04,851 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:04:11,238 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:11,239 - NegotiatorChatbot - INFO - Loading state for user: 4HzbIfWaZBdoWXg9n852WEg3Oft1
+2024-12-04 23:04:11,314 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:04:11,316 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 23:04:11,316 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:04:11,471 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:11,617 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:04:11,619 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:04:11,765 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Gen AI\n2. Applied ML\n3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'CEO at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5; SQL: 3/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:04:11,767 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 23:04:11,767 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 23:04:19,828 - NegotiatorChatbot - INFO - Raw response for achievable: {
+  "Coursera_Courses": [
+    {
+      "name": "Machine Learning Specialization",
+      "link": "https://www.coursera.org/specializations/machine-learning",
+      "duration": "11 months"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "link": "https://www.coursera.org/specializations/deep-learning",
+      "duration": "11 months"
+    },
+    {
+      "name": "Natural Language Processing Specialization",
+      "link": "https://www.coursera.org/specializations/natural-language-processing",
+      "duration": "6 months"
+    },
+    {
+      "name": "Networking Fundamentals",
+      "link": "https://www.coursera.org/learn/networking-fundamentals",
+      "duration": "4 weeks"
+    },
+    {
+      "name": "Introduction to Cloud Networking",
+      "link": "https://www.coursera.org/specializations/introduction-cloud-networking",
+      "duration": "4 weeks"
+    }
+  ],
+  "LinkedIn_Professionals": [
+    {
+      "title": "CEO",
+      "company": "Google",
+      "reason": "Gain insights into the leadership and strategic vision of Google"
+    },
+    {
+      "title": "Chief Scientist",
+      "company": "OpenAI",
+      "reason": "Connect with a leader in AI research and development"
+    },
+    {
+      "title": "Principal Engineer",
+      "company": "Amazon Web Services",
+      "reason": "Learn about best practices and challenges in cloud computing"
+    },
+    {
+      "title": "Technical Program Manager",
+      "company": "Networking Industry Consortium",
+      "reason": "Gain knowledge about networking trends and advancements"
+    },
+    {
+      "title": "Senior Data Scientist",
+      "company": "Facebook",
+      "reason": "Connect with experts in data analysis and machine learning"
+    }
+  ],
+  "Online_Community_Events": [
+    {
+      "name": "Google Cloud Study Jams",
+      "type": "Virtual event",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "PyCon US",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "MLConf",
+      "type": "Conference",
+      "frequency": "Annual"
+    }
+  ]
+}
+2024-12-04 23:04:19,834 - NegotiatorChatbot - INFO - Successfully generated achievable plan
+2024-12-04 23:04:19,835 - NegotiatorChatbot - INFO - Generating negotiated plan with 7 hours
+2024-12-04 23:04:27,740 - NegotiatorChatbot - INFO - Raw response for negotiated: {
+  "courses": [
+    {
+      "name": "Generative AI Capstone",
+      "link": "https://www.coursera.org/specializations/generative-ai-capstone",
+      "duration": "8 weeks"
+    },
+    {
+      "name": "Applied Machine Learning",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "4 weeks"
+    },
+    {
+      "name": "Networking for Career Success",
+      "link": "https://www.coursera.org/specializations/networking-career-success",
+      "duration": "6 weeks"
+    },
+    {
+      "name": "SQL for Data Science",
+      "link": "https://www.coursera.org/specializations/sql-data-science",
+      "duration": "4 weeks"
+    },
+    {
+      "name": "Python Programming for Data Science",
+      "link": "https://www.coursera.org/specializations/python-data-science",
+      "duration": "6 weeks"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Chief Technology Officer",
+      "company": "Google",
+      "reason": "For insights into the technology landscape and industry trends"
+    },
+    {
+      "title": "Director of Applied Machine Learning",
+      "company": "Meta",
+      "reason": "For knowledge of ML applications and best practices"
+    },
+    {
+      "title": "Senior Vice President of Engineering",
+      "company": "Microsoft",
+      "reason": "For understanding of software development and leadership in the tech industry"
+    },
+    {
+      "title": "Founder and CEO",
+      "company": "OpenAI",
+      "reason": "For insights into AI research and development"
+    },
+    {
+      "title": "Principal Data Scientist",
+      "company": "Netflix",
+      "reason": "For knowledge of data-driven decision-making and personalized content"
+    }
+  ],
+  "events": [
+    {
+      "name": "TechCrunch Disrupt",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Web Summit",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "AI World",
+      "type": "Conference",
+      "frequency": "Annual"
+    }
+  ]
+}
+2024-12-04 23:04:27,747 - NegotiatorChatbot - INFO - Successfully generated negotiated plan
+2024-12-04 23:04:27,748 - NegotiatorChatbot - INFO - Generating ambitious plan with 10 hours
+2024-12-04 23:04:33,145 - NegotiatorChatbot - INFO - Raw response for ambitious: {
+  "courses": [
+    {
+      "name": "Generative AI and the Future of Machine Learning",
+      "link": "https://www.coursera.org/specializations/generative-ai",
+      "duration": "4 weeks"
+    },
+    {
+      "name": "Applied Machine Learning",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "6 weeks"
+    },
+    {
+      "name": "Networking for Career Success",
+      "link": "https://www.coursera.org/specializations/networking",
+      "duration": "4 weeks"
+    }
+  ],
+  "professionals": [
+    {
+      "title": "CEO of Google",
+      "company": "Google",
+      "reason": "To learn from the top leader in the industry"
+    },
+    {
+      "title": "Sr. Director of Machine Learning",
+      "company": "Meta",
+      "reason": "To connect with a senior leader in the field of AI"
+    },
+    {
+      "title": "Founder and CEO of LinkedIn",
+      "company": "LinkedIn",
+      "reason": "To learn from the founder of a leading networking platform"
+    }
+  ],
+  "events": [
+    {
+      "name": "AI TechSummit",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Deep Learning Bootcamp",
+      "type": "Workshop",
+      "frequency": "Monthly"
+    }
+  ]
+}
+2024-12-04 23:04:33,156 - NegotiatorChatbot - INFO - Successfully generated ambitious plan
+2024-12-04 23:04:33,157 - NegotiatorChatbot - INFO - Saving plans to database
+2024-12-04 23:04:33,346 - NegotiatorChatbot - ERROR - Error saving plans: 'courses'
+2024-12-04 23:04:33,387 - NegotiatorChatbot - ERROR - Error saving plans: 'courses'
+2024-12-04 23:11:21,045 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:21,048 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:21,132 - NegotiatorChatbot - INFO - No existing state found, initializing new state
+2024-12-04 23:11:21,132 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:21,327 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-04 23:11:21,329 - NegotiatorChatbot - INFO - Processing message - Question index: 0
+2024-12-04 23:11:21,329 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:11:21,443 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:21,598 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI'}
+2024-12-04 23:11:21,599 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:21,747 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI'}
+2024-12-04 23:11:21,748 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:11:24,317 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:24,317 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:24,396 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI'}
+2024-12-04 23:11:24,397 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 23:11:24,397 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:11:24,551 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:24,702 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:11:24,703 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:24,858 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:11:24,859 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:11:50,903 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:50,903 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:11:50,983 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:11:50,983 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 23:11:50,983 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:11:51,155 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:51,336 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google'}
+2024-12-04 23:11:51,337 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:11:51,483 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google'}
+2024-12-04 23:11:51,484 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:12:09,064 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:09,065 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:09,145 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google'}
+2024-12-04 23:12:09,146 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 23:12:09,146 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:12:09,299 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:09,440 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5'}
+2024-12-04 23:12:09,441 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:09,606 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5'}
+2024-12-04 23:12:09,607 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:12:13,225 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:13,225 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:13,303 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5'}
+2024-12-04 23:12:13,303 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 23:12:13,303 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:12:13,476 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:13,628 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:12:13,630 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:13,798 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:12:13,799 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:12:17,193 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:17,194 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:17,273 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:12:17,274 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 23:12:17,275 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:12:17,433 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:17,580 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:12:17,581 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:17,736 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:12:17,737 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:12:24,720 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:24,721 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:12:24,814 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:12:24,815 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 23:12:24,816 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:12:24,960 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:25,104 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:12:25,104 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:12:25,260 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:12:25,261 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 23:12:25,262 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 23:12:31,098 - NegotiatorChatbot - INFO - Raw response for achievable: ```JSON
+{
+  "courses": [
+    {
+      "name": "Applied Machine Learning Specialization",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "2 months"
+    },
+    {
+      "name": "Data Science Specialization",
+      "link": "https://www.coursera.org/specializations/jhu-data-science",
+      "duration": "3 months"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "link": "https://www.coursera.org/specializations/deep-learning",
+      "duration": "4 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "AI/ML Engineer",
+      "company": "Google",
+      "reason": "Learn about Google's AI/ML initiatives and connect with potential mentors"
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Meta",
+      "reason": "Gain insights into industry trends and best practices"
+    },
+    {
+      "title": "Research Scientist",
+      "company": "OpenAI",
+      "reason": "Stay updated on cutting-edge advancements in AI"
+    }
+  ],
+  "events": [
+    {
+      "name": "AI Conference",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Data Science Meetup",
+      "type": "Meetup",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Google AI Residency Program",
+      "type": "Residency Program",
+      "frequency": "Biannual"
+    }
+  ]
+}
+2024-12-04 23:12:31,105 - NegotiatorChatbot - ERROR - JSON parsing error for achievable plan: Expecting value: line 1 column 1 (char 0)
+2024-12-04 23:12:31,106 - NegotiatorChatbot - ERROR - Raw response: ```JSON
+{
+  "courses": [
+    {
+      "name": "Applied Machine Learning Specialization",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "2 months"
+    },
+    {
+      "name": "Data Science Specialization",
+      "link": "https://www.coursera.org/specializations/jhu-data-science",
+      "duration": "3 months"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "link": "https://www.coursera.org/specializations/deep-learning",
+      "duration": "4 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "AI/ML Engineer",
+      "company": "Google",
+      "reason": "Learn about Google's AI/ML initiatives and connect with potential mentors"
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Meta",
+      "reason": "Gain insights into industry trends and best practices"
+    },
+    {
+      "title": "Research Scientist",
+      "company": "OpenAI",
+      "reason": "Stay updated on cutting-edge advancements in AI"
+    }
+  ],
+  "events": [
+    {
+      "name": "AI Conference",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Data Science Meetup",
+      "type": "Meetup",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Google AI Residency Program",
+      "type": "Residency Program",
+      "frequency": "Biannual"
+    }
+  ]
+}
+2024-12-04 23:12:31,110 - NegotiatorChatbot - ERROR - Failed to generate plans
+2024-12-04 23:15:23,108 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:23,109 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:23,876 - NegotiatorChatbot - INFO - State loaded - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Data Science 3. Gen AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to become a leader at Google', 'What are your current skills and expertise levels?': 'ML: 4/5; Data Science: 4/5; Python: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:15:23,877 - NegotiatorChatbot - INFO - Processing message - Question index: 7
+2024-12-04 23:15:23,878 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:24,037 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-04 23:15:24,037 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:15:24,146 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:24,278 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI'}
+2024-12-04 23:15:24,279 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:24,403 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI'}
+2024-12-04 23:15:24,403 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:15:26,644 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:26,644 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:26,714 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI'}
+2024-12-04 23:15:26,716 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 23:15:26,716 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:15:26,864 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:27,014 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:15:27,014 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:27,146 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:15:27,146 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:15:49,690 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:49,690 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:15:49,771 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:15:49,772 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 23:15:49,772 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:15:49,921 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:50,059 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google'}
+2024-12-04 23:15:50,060 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:15:50,195 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google'}
+2024-12-04 23:15:50,196 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:16:09,175 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:09,175 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:09,255 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google'}
+2024-12-04 23:16:09,256 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 23:16:09,257 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:16:09,394 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:09,533 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:16:09,534 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:09,665 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:16:09,666 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:16:13,881 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:13,881 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:13,959 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:16:13,960 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 23:16:13,960 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:16:14,104 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:14,233 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:16:14,235 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:14,366 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:16:14,367 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:16:19,160 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:19,161 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:19,239 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:16:19,240 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 23:16:19,241 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:16:19,378 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:19,542 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:16:19,543 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:19,675 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:16:19,675 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:16:25,117 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:25,118 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:16:25,191 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:16:25,193 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 23:16:25,194 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:16:25,334 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:25,494 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:16:25,495 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:25,631 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:16:25,631 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 23:16:25,632 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 23:16:32,149 - NegotiatorChatbot - INFO - Raw response for achievable: {
+    "courses": [
+        {
+            "name": "Applied Machine Learning Specialization",
+            "link": "https://www.coursera.org/specializations/applied-machine-learning",
+            "duration": "15 hours per week for 6 months"
+        },
+        {
+            "name": "Generative Adversarial Networks (GANs) Specialization",
+            "link": "https://www.coursera.org/specializations/generative-adversarial-networks",
+            "duration": "15 hours per week for 4 months"
+        },
+        {
+            "name": "Deep Learning Specialization",
+            "link": "https://www.coursera.org/specializations/deep-learning",
+            "duration": "15 hours per week for 5 months"
+        }
+    ],
+    "connections": [
+        {
+            "title": "Senior Machine Learning Engineer",
+            "company": "Google",
+            "reason": "To gain insights into the machine learning landscape at Google and to learn about the latest advancements in the field."
+        },
+        {
+            "title": "Director of AI Research",
+            "company": "Meta",
+            "reason": "To understand the research and development process behind cutting-edge AI technologies at Meta."
+        },
+        {
+            "title": "VP of Engineering",
+            "company": "Netflix",
+            "reason": "To gain knowledge about how AI and ML are used in the entertainment industry."
+        }
+    ],
+    "events": [
+        {
+            "name": "Machine Learning Meetup",
+            "type": "Meetup",
+            "frequency": "Monthly"
+        },
+        {
+            "name": "AI Conference",
+            "type": "Conference",
+            "frequency": "Annual"
+        },
+        {
+            "name": "Data Science Hackathon",
+            "type": "Hackathon",
+            "frequency": "Quarterly"
+        }
+    ]
+}
+2024-12-04 23:16:32,155 - NegotiatorChatbot - INFO - Successfully generated achievable plan
+2024-12-04 23:16:32,156 - NegotiatorChatbot - INFO - Generating negotiated plan with 7 hours
+2024-12-04 23:16:34,182 - NegotiatorChatbot - INFO - Raw response for negotiated: {
+    "courses": [
+        {"name": "Machine Learning with TensorFlow", "link": "https://www.coursera.org/specializations/tensorflow-machine-learning", "duration": "4 weeks"},
+        {"name": "Applied AI Capstone", "link": "https://www.coursera.org/specializations/applied-ai-capstone", "duration": "3 weeks"}
+    ],
+    "connections": [],
+    "events": []
+}
+2024-12-04 23:16:34,190 - NegotiatorChatbot - INFO - Successfully generated negotiated plan
+2024-12-04 23:16:34,191 - NegotiatorChatbot - INFO - Generating ambitious plan with 10 hours
+2024-12-04 23:16:38,487 - NegotiatorChatbot - INFO - Raw response for ambitious: {
+    "courses": [
+        {"name": "Machine Learning Specialization", "link": "https://www.coursera.org/specializations/machine-learning", "duration": "4 months"},
+        {"name": "Deep Learning Specialization", "link": "https://www.coursera.org/specializations/deep-learning", "duration": "6 months"},
+        {"name": "Generative AI", "link": "https://www.coursera.org/specializations/generative-ai", "duration": "2 months"}
+    ],
+    "connections": [
+        {"title": "Machine Learning Engineer", "company": "Google", "reason": "Seeking guidance on building ML models"},
+        {"title": "Deep Learning Researcher", "company": "OpenAI", "reason": "Networking and staying updated on AI advancements"},
+        {"title": "AI Product Manager", "company": "Microsoft", "reason": "Exploring leadership roles in AI"}
+    ],
+    "events": [
+        {"name": "ML Meetup", "type": "Networking", "frequency": "Monthly"},
+        {"name": "AI Conference", "type": "Education", "frequency": "Annual"},
+        {"name": "Women in Tech Lunch", "type": "Community", "frequency": "Quarterly"}
+    ]
+}
+2024-12-04 23:16:38,487 - NegotiatorChatbot - INFO - Successfully generated ambitious plan
+2024-12-04 23:16:38,487 - NegotiatorChatbot - INFO - Saving plans to database
+2024-12-04 23:16:38,874 - NegotiatorChatbot - INFO - Plans saved successfully with input ID: 2
+2024-12-04 23:16:38,874 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:16:39,042 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. GEN AI', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately I want to achieve a leadership role at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:16:39,043 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:29:36,100 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:36,108 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:36,159 - NegotiatorChatbot - ERROR - Error loading state: (psycopg2.OperationalError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT negotiator_states.id AS negotiator_states_id, negotiator_states.user_id AS negotiator_states_user_id, negotiator_states.current_question_index AS negotiator_states_current_question_index, negotiator_states.user_profile AS negotiator_states_user_profile, negotiator_states.completed AS negotiator_states_completed, negotiator_states.created_at AS negotiator_states_created_at, negotiator_states.updated_at AS negotiator_states_updated_at 
+FROM negotiator_states 
+WHERE negotiator_states.user_id = %(user_id_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'user_id_1': 'hoDIxzA8zbOCyrVmYmWLLY6NnGy1', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2024-12-04 23:29:36,159 - NegotiatorChatbot - INFO - Processing message - Question index: 0
+2024-12-04 23:29:36,159 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:29:36,672 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:36,821 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking'}
+2024-12-04 23:29:36,822 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:36,970 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking'}
+2024-12-04 23:29:36,971 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:29:40,155 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:40,155 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:40,233 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking'}
+2024-12-04 23:29:40,233 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 23:29:40,233 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:29:40,397 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:40,542 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:29:40,543 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:40,694 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:29:40,695 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:29:48,821 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:48,821 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:29:48,900 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:29:48,901 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 23:29:48,901 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:29:49,051 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:49,199 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:29:49,201 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:29:49,348 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:29:49,349 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:30:07,783 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:07,784 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:07,880 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:30:07,881 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 23:30:07,881 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:30:08,044 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:08,194 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:30:08,198 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:08,339 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:30:08,340 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:30:12,508 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:12,509 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:12,588 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5'}
+2024-12-04 23:30:12,589 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 23:30:12,589 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:30:12,744 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:12,895 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:30:12,896 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:13,064 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:30:13,065 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:30:17,258 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:17,259 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:17,341 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:30:17,343 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 23:30:17,343 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:30:17,489 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:17,636 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:30:17,638 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:17,788 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:30:17,789 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:30:23,320 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:23,320 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:30:23,401 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:30:23,403 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 23:30:23,403 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:30:23,551 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:23,695 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:30:23,695 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:23,836 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:30:23,837 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 23:30:23,838 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 23:30:28,860 - NegotiatorChatbot - INFO - Raw response for achievable: {
+"courses": [
+{
+"name": "Applied Machine Learning Specialization",
+"link": "https://www.coursera.org/specializations/applied-machine-learning",
+"duration": "4 months"
+},
+{
+"name": "Machine Learning",
+"link": "https://www.coursera.org/learn/machine-learning",
+"duration": "11 weeks"
+},
+{
+"name": "Networking Fundamentals",
+"link": "https://www.coursera.org/learn/networking-fundamentals",
+"duration": "6 weeks"
+}
+],
+"connections": [
+{
+"title": "Principal Machine Learning Engineer",
+"company": "Google",
+"reason": "Seek guidance on career path and industry trends"
+},
+{
+"title": "Software Engineer",
+"company": "Meta",
+"reason": "Learn about the latest advancements in AI/ML"
+},
+{
+"title": "Network Architect",
+"company": "Microsoft",
+"reason": "Understand the networking infrastructure of large-scale tech companies"
+}
+],
+"events": [
+{
+"name": "ML Meetup",
+"type": "Networking event",
+"frequency": "Monthly"
+},
+{
+"name": "Tech Conference",
+"type": "Industry event",
+"frequency": "Annually"
+},
+{
+"name": "Online Webinar on Applied ML",
+"type": "Educational event",
+"frequency": "Quarterly"
+}
+]
+}
+2024-12-04 23:30:28,863 - NegotiatorChatbot - INFO - Successfully generated achievable plan
+2024-12-04 23:30:28,864 - NegotiatorChatbot - INFO - Generating negotiated plan with 7 hours
+2024-12-04 23:30:34,451 - NegotiatorChatbot - INFO - Raw response for negotiated: {
+  "courses": [
+    {
+      "name": "Applied Machine Learning Coursera Specialization",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "4 months"
+    },
+    {
+      "name": "Machine Learning Specialization Coursera",
+      "link": "https://www.coursera.org/specializations/machine-learning",
+      "duration": "11 months"
+    },
+    {
+      "name": "Networking Fundamentals Specialization",
+      "link": "https://www.coursera.org/specializations/networking-fundamentals",
+      "duration": "4 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Microsoft",
+      "reason": "To learn from their expertise in ML"
+    },
+    {
+      "title": "Network Engineer",
+      "company": "Cisco",
+      "reason": "To connect with industry professionals and stay up-to-date on networking advancements"
+    },
+    {
+      "title": "Google Cloud Architect",
+      "company": "Google",
+      "reason": "To gain insights into Google's cloud architecture and industry trends"
+    }
+  ],
+  "events": [
+    {
+      "name": "ML Meetup",
+      "type": "Networking",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Networking Conference",
+      "type": "Networking",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Google Speaker Series",
+      "type": "Learning",
+      "frequency": "Quarterly"
+    }
+  ]
+}
+2024-12-04 23:30:34,456 - NegotiatorChatbot - INFO - Successfully generated negotiated plan
+2024-12-04 23:30:34,457 - NegotiatorChatbot - INFO - Generating ambitious plan with 10 hours
+2024-12-04 23:30:37,208 - NegotiatorChatbot - INFO - Raw response for ambitious: {
+    "courses": [
+        {
+            "name": "Applied Machine Learning Specialization",
+            "link": "https://www.coursera.org/specializations/applied-machine-learning",
+            "duration": "4 months"
+        },
+        {
+            "name": "Machine Learning Specialization",
+            "link": "https://www.coursera.org/specializations/machine-learning",
+            "duration": "4 months"
+        },
+        {
+            "name": "Networking Fundamentals",
+            "link": "https://www.udemy.com/course/networking-fundamentals/",
+            "duration": "2 months"
+        }
+    ],
+    "connections": [],
+    "events": []
+}
+2024-12-04 23:30:37,210 - NegotiatorChatbot - INFO - Successfully generated ambitious plan
+2024-12-04 23:30:37,210 - NegotiatorChatbot - INFO - Saving plans to database
+2024-12-04 23:30:37,646 - NegotiatorChatbot - INFO - Plans saved successfully with input ID: 3
+2024-12-04 23:30:37,647 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:30:37,827 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:30:37,829 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:22,846 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:22,846 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:22,930 - NegotiatorChatbot - INFO - State loaded - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML; 2. Machine Learning 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python - 4/5; ML - 4/5; Data Science - 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:54:22,930 - NegotiatorChatbot - INFO - Processing message - Question index: 7
+2024-12-04 23:54:22,930 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:23,111 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-04 23:54:23,111 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:23,211 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:23,347 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking'}
+2024-12-04 23:54:23,347 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:23,478 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking'}
+2024-12-04 23:54:23,493 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:25,492 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:25,492 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:25,575 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking'}
+2024-12-04 23:54:25,575 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-04 23:54:25,575 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:25,709 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:25,842 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:54:25,842 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:25,976 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:54:25,977 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:33,967 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:33,971 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:34,045 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-04 23:54:34,046 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-04 23:54:34,047 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:34,178 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:34,303 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:54:34,303 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:34,452 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:54:34,452 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:51,455 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:51,455 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:51,537 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google'}
+2024-12-04 23:54:51,538 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-04 23:54:51,538 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:51,669 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:51,787 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5'}
+2024-12-04 23:54:51,802 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:51,934 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5'}
+2024-12-04 23:54:51,934 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:55,383 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:55,383 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:55,483 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5'}
+2024-12-04 23:54:55,485 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-04 23:54:55,485 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:55,615 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:55,772 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:54:55,772 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:55,914 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:54:55,914 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:54:58,981 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:58,981 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:54:59,063 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-04 23:54:59,064 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-04 23:54:59,065 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:54:59,178 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:59,328 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:54:59,328 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:54:59,463 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:54:59,463 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-04 23:55:07,310 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:55:07,310 - NegotiatorChatbot - INFO - Loading state for user: hoDIxzA8zbOCyrVmYmWLLY6NnGy1
+2024-12-04 23:55:07,397 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-04 23:55:07,398 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-04 23:55:07,399 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-04 23:55:07,537 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:55:07,677 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:55:07,677 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:55:07,806 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:55:07,806 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-04 23:55:07,806 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-04 23:55:10,870 - NegotiatorChatbot - INFO - Raw response for achievable: {
+    "courses": [
+        {
+            "name": "Applied Machine Learning Specialization",
+            "link": "https://www.coursera.org/specializations/applied-machine-learning",
+            "duration": "5 months"
+        },
+        {
+            "name": "Machine Learning Specialization",
+            "link": "https://www.coursera.org/specializations/machine-learning",
+            "duration": "11 months"
+        },
+        {
+            "name": "Networking Specialization",
+            "link": "https://www.coursera.org/specializations/computer-networking",
+            "duration": "4 months"
+        }
+    ],
+    "connections": [],
+    "events": []
+}
+2024-12-04 23:55:10,870 - NegotiatorChatbot - INFO - Successfully generated achievable plan
+2024-12-04 23:55:10,870 - NegotiatorChatbot - INFO - Generating negotiated plan with 7 hours
+2024-12-04 23:55:16,740 - NegotiatorChatbot - INFO - Raw response for negotiated: {
+  "courses": [
+    {
+      "name": "Applied Machine Learning Course",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "6 months"
+    },
+    {
+      "name": "General AI (Artificial Intelligence)",
+      "link": "https://www.udacity.com/school-of-ai/degree/nd032",
+      "duration": "1 year"
+    },
+    {
+      "name": "Networking Fundamentals",
+      "link": "https://www.cisco.com/c/en/us/training-events/training-certifications/networking-academy/networking-essentials.html",
+      "duration": "2 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Google",
+      "reason": "To gain insights on ML applications and industry best practices"
+    },
+    {
+      "title": "AI Researcher",
+      "company": "OpenAI",
+      "reason": "To stay updated on cutting-edge AI research and advancements"
+    },
+    {
+      "title": "Network Architect",
+      "company": "Cisco",
+      "reason": "To build relationships and learn about networking infrastructure design"
+    }
+  ],
+  "events": [
+    {
+      "name": "Google AI Summit",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "ACM SIGCOMM",
+      "type": "Conference",
+      "frequency": "Semi-annual"
+    },
+    {
+      "name": "Networking Meetup",
+      "type": "Meetup",
+      "frequency": "Monthly"
+    }
+  ]
+}
+2024-12-04 23:55:16,748 - NegotiatorChatbot - INFO - Successfully generated negotiated plan
+2024-12-04 23:55:16,748 - NegotiatorChatbot - INFO - Generating ambitious plan with 10 hours
+2024-12-04 23:55:22,261 - NegotiatorChatbot - INFO - Raw response for ambitious: {
+  "courses": [
+    {
+      "name": "Applied Machine Learning Specialization",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "4 months"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "link": "https://www.coursera.org/specializations/deep-learning",
+      "duration": "5 months"
+    },
+    {
+      "name": "Networking: Principles and Practice Course",
+      "link": "https://www.coursera.org/learn/networking",
+      "duration": "2 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "AI Researcher",
+      "company": "Google",
+      "reason": "To learn about the latest advancements in AI and ML"
+    },
+    {
+      "title": "Engineering Manager",
+      "company": "Microsoft",
+      "reason": "To gain insights into leadership and management in the tech industry"
+    },
+    {
+      "title": "Network Architect",
+      "company": "Cisco",
+      "reason": "To expand my understanding of computer networking and best practices"
+    }
+  ],
+  "events": [
+    {
+      "name": "Google Tech Talk",
+      "type": "Conference",
+      "frequency": "Quarterly"
+    },
+    {
+      "name": "AI Meetup",
+      "type": "Networking Event",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Tech Career Fair",
+      "type": "Career Event",
+      "frequency": "Annually"
+    }
+  ]
+}
+2024-12-04 23:55:22,270 - NegotiatorChatbot - INFO - Successfully generated ambitious plan
+2024-12-04 23:55:22,271 - NegotiatorChatbot - INFO - Saving plans to database
+2024-12-04 23:55:22,709 - NegotiatorChatbot - INFO - Plans saved successfully with input ID: 4
+2024-12-04 23:55:22,709 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-04 23:55:22,921 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': '1. Applied ML 2. Gen AI 3. Networking', 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Become a leader at Google', 'What are your current skills and expertise levels?': 'Python: 4/5; ML: 4/5; Data Science: 4/5', 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-04 23:55:22,922 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:13:05,756 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:05,757 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:05,844 - NegotiatorChatbot - INFO - No existing state found, initializing new state
+2024-12-05 10:13:05,845 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:06,022 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {}
+2024-12-05 10:13:06,023 - NegotiatorChatbot - INFO - Processing message - Question index: 0
+2024-12-05 10:13:06,023 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:13:06,123 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:06,261 - NegotiatorChatbot - INFO - State saved - Question index: 0, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking"}
+2024-12-05 10:13:06,264 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:06,398 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking"}
+2024-12-05 10:13:06,398 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:13:10,381 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:10,382 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:10,458 - NegotiatorChatbot - INFO - State loaded - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking"}
+2024-12-05 10:13:10,459 - NegotiatorChatbot - INFO - Processing message - Question index: 1
+2024-12-05 10:13:10,459 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:13:10,615 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:10,751 - NegotiatorChatbot - INFO - State saved - Question index: 1, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-05 10:13:10,752 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:10,889 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-05 10:13:10,892 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:13:40,003 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:40,003 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:13:40,082 - NegotiatorChatbot - INFO - State loaded - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5'}
+2024-12-05 10:13:40,083 - NegotiatorChatbot - INFO - Processing message - Question index: 2
+2024-12-05 10:13:40,083 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:13:40,223 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:40,354 - NegotiatorChatbot - INFO - State saved - Question index: 2, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).'}
+2024-12-05 10:13:40,355 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:13:40,494 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).'}
+2024-12-05 10:13:40,495 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:14:35,130 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:35,131 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:35,210 - NegotiatorChatbot - INFO - State loaded - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).'}
+2024-12-05 10:14:35,212 - NegotiatorChatbot - INFO - Processing message - Question index: 3
+2024-12-05 10:14:35,212 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:14:35,349 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:35,492 - NegotiatorChatbot - INFO - State saved - Question index: 3, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5"}
+2024-12-05 10:14:35,494 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:35,631 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5"}
+2024-12-05 10:14:35,633 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:14:39,536 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:39,537 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:39,612 - NegotiatorChatbot - INFO - State loaded - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5"}
+2024-12-05 10:14:39,613 - NegotiatorChatbot - INFO - Processing message - Question index: 4
+2024-12-05 10:14:39,614 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:14:39,760 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:39,899 - NegotiatorChatbot - INFO - State saved - Question index: 4, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-05 10:14:39,900 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:40,043 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-05 10:14:40,044 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:14:46,428 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:46,428 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:46,534 - NegotiatorChatbot - INFO - State loaded - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses'}
+2024-12-05 10:14:46,536 - NegotiatorChatbot - INFO - Processing message - Question index: 5
+2024-12-05 10:14:46,536 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:14:46,696 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:46,887 - NegotiatorChatbot - INFO - State saved - Question index: 5, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-05 10:14:46,888 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:47,047 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-05 10:14:47,049 - NegotiatorChatbot - INFO - Saving message history - Sender: bot
+2024-12-05 10:14:54,666 - NegotiatorChatbot - INFO - Initializing NegotiatorChatbot for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:54,668 - NegotiatorChatbot - INFO - Loading state for user: dU02P7mfcFgEIITlN5iYWujx7PN2
+2024-12-05 10:14:54,754 - NegotiatorChatbot - INFO - State loaded - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses'}
+2024-12-05 10:14:54,755 - NegotiatorChatbot - INFO - Processing message - Question index: 6
+2024-12-05 10:14:54,755 - NegotiatorChatbot - INFO - Saving message history - Sender: user
+2024-12-05 10:14:54,899 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:55,041 - NegotiatorChatbot - INFO - State saved - Question index: 6, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-05 10:14:55,043 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:14:55,198 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-05 10:14:55,200 - NegotiatorChatbot - INFO - Generating achievement plans
+2024-12-05 10:14:55,200 - NegotiatorChatbot - INFO - Generating achievable plan with 5 hours
+2024-12-05 10:15:00,874 - NegotiatorChatbot - INFO - Raw response for achievable: {
+    "courses": [
+        {
+            "name": "Applied Machine Learning Specialization",
+            "link": "coursera.org/specializations/applied-machine-learning",
+            "duration": "3 months"
+        },
+        {
+            "name": "Generative AI Specialization",
+            "link": "coursera.org/specializations/generative-ai",
+            "duration": "3 months"
+        },
+        {
+            "name": "The Power of Networking",
+            "link": "linkedin.com/learning/the-power-of-networking",
+            "duration": "1 month"
+        }
+    ],
+    "connections": [
+        {
+            "title": "Machine Learning Engineer",
+            "company": "Meta",
+            "reason": "Gain insights into the latest ML trends and best practices"
+        },
+        {
+            "title": "AI Researcher",
+            "company": "Google",
+            "reason": "Explore potential collaborations and learn about the future of AI"
+        },
+        {
+            "title": "Board Member",
+            "company": "Techstars",
+            "reason": "Understand the responsibilities and qualities of a successful board member"
+        }
+    ],
+    "events": [
+        {
+            "name": "Machine Learning Meetup",
+            "type": "Industry Meetup",
+            "frequency": "Monthly"
+        },
+        {
+            "name": "AI Conference",
+            "type": "Industry Conference",
+            "frequency": "Annually"
+        },
+        {
+            "name": "Google Speaker Series",
+            "type": "Company Speaker Event",
+            "frequency": "Quarterly"
+        }
+    ]
+}
+2024-12-05 10:15:00,879 - NegotiatorChatbot - INFO - Successfully generated achievable plan
+2024-12-05 10:15:00,880 - NegotiatorChatbot - INFO - Generating negotiated plan with 7 hours
+2024-12-05 10:15:06,635 - NegotiatorChatbot - INFO - Raw response for negotiated: {
+  "courses": [
+    {
+      "name": "Applied Machine Learning",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "3 months"
+    },
+    {
+      "name": "Generative AI",
+      "link": "https://www.coursera.org/specializations/generative-ai",
+      "duration": "3 months"
+    },
+    {
+      "name": "The Power of Networking",
+      "link": "https://www.linkedin.com/learning/the-power-of-networking",
+      "duration": "1 hour"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Google",
+      "reason": "To gain insights into the latest advancements in machine learning and AI"
+    },
+    {
+      "title": "Board Member",
+      "company": "Apple",
+      "reason": "To learn about the strategic decision-making process at a top tech company"
+    },
+    {
+      "title": "CEO",
+      "company": "Microsoft",
+      "reason": "To gain a broader understanding of the tech industry and its leadership challenges"
+    }
+  ],
+  "events": [
+    {
+      "name": "Machine Learning Meetup",
+      "type": "Networking event",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Tech Executive Conference",
+      "type": "Industry event",
+      "frequency": "Annually"
+    },
+    {
+      "name": "Board Member Workshop",
+      "type": "Professional development event",
+      "frequency": "Quarterly"
+    }
+  ]
+}
+2024-12-05 10:15:06,642 - NegotiatorChatbot - INFO - Successfully generated negotiated plan
+2024-12-05 10:15:06,642 - NegotiatorChatbot - INFO - Generating ambitious plan with 10 hours
+2024-12-05 10:15:12,265 - NegotiatorChatbot - INFO - Raw response for ambitious: {
+  "courses": [
+    {
+      "name": "Applied Machine Learning Course",
+      "link": "https://www.coursera.org/specializations/applied-machine-learning",
+      "duration": "3 months"
+    },
+    {
+      "name": "General Artificial Intelligence Course",
+      "link": "https://www.udacity.com/school-of-ai",
+      "duration": "6 months"
+    }
+  ],
+  "connections": [
+    {
+      "title": "Product Management Lead",
+      "company": "Google",
+      "reason": "To gain insights into the leadership qualities in the tech industry, especially at Google."
+    },
+    {
+      "title": "Artificial Intelligence Engineer",
+      "company": "DeepMind",
+      "reason": "To learn about cutting-edge AI research and development techniques."
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Meta",
+      "reason": "To leverage my existing Python and SQL skills in a professional setting."
+    },
+    {
+      "title": "Senior Network Engineer",
+      "company": "Cisco",
+      "reason": "To foster connections in the networking domain and enhance my knowledge in this area."
+    }
+  ],
+  "events": [
+    {
+      "name": "AI and Data Science Conference",
+      "type": "Conference",
+      "frequency": "Annual"
+    },
+    {
+      "name": "Networking Meetup",
+      "type": "Meetup",
+      "frequency": "Monthly"
+    },
+    {
+      "name": "Career Networking Event",
+      "type": "Event",
+      "frequency": "Quarterly"
+    }
+  ]
+}
+2024-12-05 10:15:12,271 - NegotiatorChatbot - INFO - Successfully generated ambitious plan
+2024-12-05 10:15:12,272 - NegotiatorChatbot - INFO - Saving plans to database
+2024-12-05 10:15:12,664 - NegotiatorChatbot - INFO - Plans saved successfully with input ID: 5
+2024-12-05 10:15:12,665 - NegotiatorChatbot - INFO - Saving state to database
+2024-12-05 10:15:12,832 - NegotiatorChatbot - INFO - State saved - Question index: 7, Profile: {'What specific skills would you like to develop? Please list them in order of priority.': "1. Applied ML; 2. Gen AI' 3. Power of Networking", 'How many hours per week can you dedicate to skill development and networking?': '5', "What's your dream career position or role? Where do you see yourself ultimately?": 'Ultimately, I want to become a board member or a leader at a top tech company (Google especially).', 'What are your current skills and expertise levels?': "Currently, I'd rate myself in: Python - 4/5; SQL - 4/5; Machine Learning - 4/5; Data Science - 4/5; Networking - 3/5; Web Development - 4/5", 'How do you prefer to learn? (Video courses, reading, hands-on projects, mentorship)': 'Video courses', 'What types of resources do you prefer? (Online courses, books, workshops, mentorship)': 'Online courses', 'How do you feel about networking? Do you prefer one-on-one meetings or group events?': 'One-on-one meetings'}
+2024-12-05 10:15:12,835 - NegotiatorChatbot - INFO - Saving message history - Sender: bot

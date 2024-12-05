@@ -1,5 +1,5 @@
 from database import Base, engine
-from models import User, PersonaInput, PersonaInputNew, Post, PostNew, ChatHistory, ChatState, Feedback
+from models import NegotiatorHistory, NegotiatorState
 
 def create_all_tables():
     print("Creating all database tables...")

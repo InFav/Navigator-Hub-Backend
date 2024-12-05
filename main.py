@@ -25,7 +25,8 @@ from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from models import Feedback
-from models import ChatState, ChatHistory
+from models import ChatState, ChatHistory, NegotiatorInput, NegotiatorPlan
+from negotiatorlogic import NegotiatorChatbot
 
 load_dotenv()
 
@@ -551,6 +552,86 @@ async def get_chat_state(
             status_code=500,
             detail=str(e)
         )
+@app.post("/negotiator/chat", response_model=ChatResponse)
+async def handle_negotiator_chat(
+    user_message: UserMessage,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        user_id = token_data["uid"]
+        chatbot = NegotiatorChatbot(db, user_id)
+        
+        try:
+            result = await chatbot.process_message(message=user_message.message)
+            return ChatResponse(
+                response=result["response"],
+                completed=result.get("completed", False),
+                plans=result.get("plans")
+            )
+        except Exception as e:
+            db.rollback()  
+            print(f"Error processing message: {e}")
+            raise HTTPException(
+                status_code=500,
+                detail="Error processing message"
+            )
+            
+    except Exception as e:
+        db.rollback()  
+        print(f"Negotiator chat error: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Server error: {str(e)}"
+        )
+    finally:
+        try:
+            db.close()  
+        except:
+            pass
+
+@app.get("/negotiator/plans/{user_id}")
+async def get_user_plans(
+    user_id: str,
+    token_data: dict = Depends(verify_firebase_token),
+    db: Session = Depends(database.get_db)
+):
+    try:
+        if token_data["uid"] != user_id:
+            raise HTTPException(status_code=403, detail="Not authorized to view these plans")
+            
+        negotiator_input = db.query(NegotiatorInput).filter(
+            NegotiatorInput.user_id == user_id
+        ).order_by(NegotiatorInput.created_at.desc()).first()
+        
+        if not negotiator_input:
+            raise HTTPException(status_code=404, detail="No plans found")
+            
+        plans = db.query(NegotiatorPlan).filter(
+            NegotiatorPlan.negotiator_id == negotiator_input.id
+        ).all()
+        
+        response_data = {
+            "plan_id": negotiator_input.id,
+            "data": {
+                plan.plan_type: {
+                    "weekly_hours": plan.weekly_hours,
+                    "courses": plan.courses,
+                    "connections": plan.connections,
+                    "events": plan.events
+                }
+                for plan in plans
+            }
+        }
+        
+        # Debug logging
+        print("Response data:", response_data)
+        
+        return response_data
+        
+    except Exception as e:
+        print(f"Error getting plans: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
