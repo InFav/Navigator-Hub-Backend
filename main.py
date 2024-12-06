@@ -22,7 +22,7 @@ import json
 from datetime import datetime, timedelta
 import google.generativeai as genai
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, validator
 from datetime import datetime
 from models import Feedback
 from models import ChatState, ChatHistory, NegotiatorInput, NegotiatorPlan
@@ -67,8 +67,16 @@ class FeedbackCreate(BaseModel):
     rating: int
     type: str
     feedback: str
-    userEmail: Optional[str]
+    userEmail: Optional[str] = None
     timestamp: str
+
+    @validator('timestamp')
+    def validate_timestamp(cls, v):
+        try:
+            datetime.fromisoformat(v.replace('Z', '+00:00'))
+            return v
+        except ValueError:
+            raise ValueError("Invalid timestamp format")
 
 class ChatHistoryResponse(BaseModel):
     messages: List[dict]
@@ -414,61 +422,81 @@ async def get_user_schedule(
 @app.post("/api/feedback")
 async def create_feedback(feedback: FeedbackCreate, db: Session = Depends(database.get_db)):
     try:
+        # Parse timestamp safely
+        try:
+            timestamp = datetime.fromisoformat(feedback.timestamp.replace('Z', '+00:00'))
+        except ValueError as e:
+            print(f"Timestamp parsing error: {e}")
+            raise HTTPException(
+                status_code=400, 
+                detail="Invalid timestamp format. Expected ISO format (YYYY-MM-DDTHH:MM:SS)"
+            )
+
         # Save to database
         db_feedback = Feedback(
             rating=feedback.rating,
             type=feedback.type,
             feedback=feedback.feedback,
             user_email=feedback.userEmail,
-            timestamp=datetime.fromisoformat(feedback.timestamp)
+            timestamp=timestamp
         )
-        db.add(db_feedback)
-        db.commit()
-
-        # Create email content
-        email_body = f"""
-        New Feedback Received
         
-        From: {feedback.userEmail or 'Anonymous'}
-        Rating: {feedback.rating}/5
-        Type: {feedback.type}
-        
-        Feedback Message:
-        {feedback.feedback}
-        
-        Time: {feedback.timestamp}
-        """
+        try:
+            db.add(db_feedback)
+            db.commit()
+        except Exception as e:
+            print(f"Database error: {e}")
+            db.rollback()
+            raise HTTPException(status_code=500, detail="Database error occurred")
 
-        admin_message = MessageSchema(
-            subject=f"Navigator Hub Feedback: {feedback.type.title()}",
-            recipients=["hello@navhub.ai", "users.navhub@gmail.com"],
-            body=email_body,
-            subtype="plain"
-        )
+        try:
+            email_body = f"""
+            New Feedback Received
 
-        fastmail = FastMail(mail_config)
-        await fastmail.send_message(admin_message)
+            From: {feedback.userEmail or 'Anonymous'}
+            Rating: {feedback.rating}/5
+            Type: {feedback.type}
 
-        if feedback.userEmail:
-            user_message = MessageSchema(
-                subject="Thank you for your feedback - Navigator Hub",
-                recipients=[feedback.userEmail],
-                body=f"""
-                Thank you for your feedback!
-                
-                We've received your {feedback.type} and will review it carefully.
-                
-                Your feedback:
-                {feedback.feedback}
-                
-                Best regards,
-                Navigator Hub Team
-                """,
+            Feedback Message:
+            {feedback.feedback}
+
+            Time: {timestamp}
+            """
+
+            admin_message = MessageSchema(
+                subject=f"Navigator Hub Feedback: {feedback.type.title()}",
+                recipients=["hello@navhub.ai", "users.navhub@gmail.com"],
+                body=email_body,
                 subtype="plain"
             )
-            await fastmail.send_message(user_message)
+
+            fastmail = FastMail(mail_config)
+            await fastmail.send_message(admin_message)
+
+            if feedback.userEmail:
+                user_message = MessageSchema(
+                    subject="Thank you for your feedback - Navigator Hub",
+                    recipients=[feedback.userEmail],
+                    body=f"""
+                    Thank you for your feedback!
+
+                    We've received your {feedback.type} and will review it carefully.
+
+                    Your feedback:
+                    {feedback.feedback}
+
+                    Best regards,
+                    Navigator Hub Team
+                    """,
+                    subtype="plain"
+                )
+                await fastmail.send_message(user_message)
+        except Exception as e:
+            print(f"Email sending error: {e}")
 
         return {"status": "success"}
+    except HTTPException:
+        raise
     except Exception as e:
         print(f"Error processing feedback: {e}")
         raise HTTPException(status_code=500, detail=str(e))
