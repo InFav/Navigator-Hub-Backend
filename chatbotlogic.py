@@ -46,27 +46,100 @@ class ChatbotLogic:
             self.model = genai.GenerativeModel('gemini-pro')
             
             self.phase1_questions = [
-                "Tell me your name",
-                "Could you tell me about your current role and experience?",
-                "What are your short and long term goals? Where do you see yourself in 5 years ? What is your ideal role?",
-                "Are you interested in changing industries or roles?",
-                "What motivates you to progress professionally? Tell me what makes you excited when you get up in the morning or the key factor behind your hard work. An Example my team has is to build a legacy or financial growth.",
+                {
+                    "number": 1,
+                    "total": 5,
+                    "question": "Can you tell me your name.",
+                    "emoji": "👋"
+                },
+                {
+                    "number": 2,
+                    "total": 5,
+                    "question": "How many years of professional experience do you have?",
+                    "emoji": "⏳"
+                },
+                {
+                    "number": 3,
+                    "total": 5,
+                    "question": "What are the highlights of your career journey so far? What are the achievements you are most proud of? For example: tell me about an award you won or a project you were recognised for.",
+                    "emoji": "🏆"
+                },
+                {
+                    "number": 4,
+                    "total": 5,
+                    "question": "What are your short and long term goals? Where do you see yourself in 5 years? What is your ideal role?",
+                    "emoji": "🎯"
+                },
+                {
+                    "number": 5,
+                    "total": 5,
+                    "question": "What motivates you to progress professionally? Tell me what makes you excited when you get up in the morning or the key factor behind your hard work. An Example: My team's goal is to build a legacy.",
+                    "emoji": "✨"
+                }
             ]
             
             self.phase2_questions = [
-                "What best describes your professional role? (Startup Founder/Early Career Professional/Mid Level Professional/Senior or Executive)",
-                "Where do you currently work?",
-                "What is your main goal for building influence? (Personal Branding/Product Promotions/Specific Topic Expertise)",
-                "Tell me about your career journey.",
-                "What size of companies are you targeting? (10-50/50-100/100-500/500-1000/1000+)",
-                "Which industries are you focusing on?",
-                "Who is your target audience? (Engineers/Researchers/Product Managers/Marketers/Designers)",
-                "Could you share some of your favorite LinkedIn posts that reflect your writing style?",
-                "What posts or content have performed best with your audience?",
-                "How many posts would you like to create? (Choose between 5-10)",
-                "What's the purpose of these posts? (Building up to News/Provide Information/Foster Audience Relationships/Promote Something/Expand your Network)",
-                "What's your preferred timeline for these posts? (1-4 weeks)"
-            ]
+            {
+                "number": 1,
+                "total": 10,
+                "question": "What best describes your professional role? (Student/Startup Founder/Early Career Professional/Mid Level Professional/Senior or Executive)",
+                "emoji": "💼"
+            },
+            {
+                "number": 2,
+                "total": 10,
+                "question": "Where do you currently work/study? Please mention your current role, the previous kind of projects you have done or the path you took to be where you are right now. The more information the better!",
+                "emoji": "🏢"
+            },
+            {
+                "number": 3,
+                "total": 10,
+                "question": "What is your main goal for building influence? (Personal Branding/Product Promotions/Specific Topic Expertise)",
+                "emoji": "🎯"
+            },
+            {
+                "number": 4,
+                "total": 10,
+                "question": "We are going to get deeper into the Strategy of targeting the type of audience you want to capture. That is, what size of companies would you prefer most of the audience come from, who get impacted by your content (10-50/50-100/100-500/500-1000/1000+)",
+                "emoji": "🎯"
+            },
+            {
+                "number": 5,
+                "total": 10,
+                "question": "What is your focus industry for building influence, that is, what industry would you like most if your audience members to come from?",
+                "emoji": "🏭"
+            },
+            {
+                "number": 6,
+                "total": 10,
+                "question": "Could you share some of your favorite LinkedIn posts or ANY writing samples that reflect your writing style the most? Please copy and paste the post text, no links please– I get confused with links.",
+                "emoji": "✍️"
+            },
+            {
+                "number": 7,
+                "total": 10,
+                "question": "What posts or content have performed best with your audience? This could be something you wrote or read that seem to have gotten a lot of traction with the audience members you'd like to influence. Please copy and paste the post text, no links– I get confused with links.",
+                "emoji": "📈"
+            },
+            {
+                "number": 8,
+                "total": 10,
+                "question": "How many posts would you like to create for your first LinkedIn post series by Aru from NavHub? (Choose between 5-10)",
+                "emoji": "🔢"
+            },
+            {
+                "number": 9,
+                "total": 10,
+                "question": "What's the purpose of this specific first LinkedIn post series we will be launching today? (Examples: Building up to a News, Provide Information, Foster Audience Relationships, Promote Something, Expand your Network)",
+                "emoji": "🎯"
+            },
+            {
+                "number": 10,
+                "total": 10,
+                "question": "What's your preferred timeline for these posts, aka, how long would you like this inaugural series for building your strategic influence, to last? (1-4 weeks)",
+                "emoji": "📅"
+            }
+        ]
         except Exception as e:
             print(f"Error initializing ChatbotLogic: {e}")
             raise
@@ -140,171 +213,291 @@ class ChatbotLogic:
         try:
             self.save_chat_history(user_id, message, 'user')
             
-            # If chat is already completed, return appropriate response
             if self.completed:
                 return {
                     "response": "Your content strategy has already been created. Would you like to create a new one?",
                     "completed": True,
                     "phase": self.current_phase,
-                    "schedule": None  # Add schedule if needed
+                    "schedule": None
+                }
+            
+            result = await (self.process_phase1_message(message, user_id) 
+                        if self.current_phase == 1 
+                        else self.process_phase2_message(message, user_id))
+            
+            if result is None:
+                result = {
+                    "response": "I apologize, but I encountered an unexpected error. Please try again.",
+                    "completed": False,
+                    "phase": self.current_phase
                 }
                 
-            if self.current_phase == 1:
-                result = await self.process_phase1_message(message, user_id)
-            else:
-                result = await self.process_phase2_message(message, user_id)
+            self.save_chat_history(user_id, result["response"], 'bot')
             
-            if result.get("response"):
-                self.save_chat_history(user_id, result["response"], 'bot')
+            if result.get("next_message"):
+                self.save_chat_history(user_id, result["next_message"], 'bot')
             
             if result.get("completed"):
                 self.completed = True
+                
             self.save_chat_state()
-            
             return result
                 
         except Exception as e:
             print(f"Error processing message: {e}")
-            raise
-
+            return {
+                "response": "I apologize, but I encountered an unexpected error. Please try again.",
+                "completed": False,
+                "phase": self.current_phase
+            }
+        
     def determine_role(self, profile_summary: str) -> str:
         try:
-            role_prompt = """
-            Based on this professional profile summary, determine if this person should be a MENTOR or MENTEE.
-            Key indicators for MENTOR:
-            - 5+ years of experience
+            years_question = "How many years of professional experience do you have?"
+            years_response = self.user_profile.get(years_question, "0")
+            
+            try:
+                years = float(''.join(c for c in years_response.split()[0] if c.isdigit() or c == '.'))
+            except:
+                years = 0
+                print(f"Could not parse years from response: {years_response}")
+            
+            role_prompt = f"""
+            Based on this professional's profile, determine if they should be a MENTOR or MENTEE.
+            They have {years} years of experience.
+
+            Rules:
+            - If less than 5 years experience = MENTEE
+            - If 5 or more years experience = MENTOR
+
+            Additional factors to consider only if years are borderline (4-6 years):
             - Leadership or management experience
             - History of mentoring others
             - Strong expertise in specific areas
             - Achievement-focused responses
-            
-            Key indicators for MENTEE:
-            - Less than 5 years experience
-            - Seeking guidance or development
-            - Focus on learning and growth
-            - Minimal leadership experience
-            - Challenge-focused responses
 
             Profile Summary:
             {profile_summary}
+            Years of Experience: {years}
 
             Respond with only one word: either 'mentor' or 'mentee'
-            """.format(profile_summary=profile_summary)
+            """
             
             role_response = self.model.generate_content(role_prompt).text.strip().lower()
-            return role_response if role_response in ['mentor', 'mentee'] else 'mentee'
+            determined_role = role_response if role_response in ['mentor', 'mentee'] else 'mentee'
+            
+            print(f"Role determination: Years: {years}, Role: {determined_role}")
+            return determined_role
+            
         except Exception as e:
             print(f"Error determining role: {e}")
             return 'mentee'
 
     async def process_phase1_message(self, message: str, user_id: str) -> dict:
         try:
+            print(f"Phase 1 - Current index: {self.current_question_index}")  # Debug log
             current_question = self.phase1_questions[self.current_question_index]
-            self.user_profile[current_question] = message
+            question_key = current_question["question"]
+            self.user_profile[question_key] = message
             
-            if self.current_question_index >= len(self.phase1_questions) - 1:
+            self.current_question_index += 1
+            print(f"Phase 1 - Incremented index: {self.current_question_index}")  # Debug log
+            
+            if self.current_question_index >= len(self.phase1_questions):
+                print("Phase 1 complete - Transitioning to Phase 2")  # Debug log
+                summary_pairs = []
+                for q in self.phase1_questions:
+                    question = q["question"]
+                    answer = self.user_profile.get(question, "")
+                    summary_pairs.append(f"{question}: {answer}")
+                    
                 summary_prompt = (
                     "Create a professional profile summary focused on experience level, "
                     "leadership history, and mentoring potential from these responses:\n" + 
-                    "\n".join([f"{q}: {ans}" for q, ans in self.user_profile.items()])
+                    "\n".join(summary_pairs)
                 )
                 
                 profile_summary = self.model.generate_content(summary_prompt).text
                 role = self.determine_role(profile_summary)
                 
-                transition_response = f"Thank you for sharing your professional journey. Your growth so far sounds inspiring!  You seem to be in an ideal position to be a great {role}. I have a few more questions to know more about your style, so that we can build your content with authenticity."
-                first_content_question = self.phase2_questions[0]
-                response = f"{transition_response}\n\n{first_content_question}"
-                
+                # Reset for phase 2
                 self.current_phase = 2
                 self.current_question_index = 0
                 
+                # Prepare first question of phase 2
+                first_question = self.phase2_questions[0]
+                formatted_question = json.dumps({
+                    "number": first_question["number"],
+                    "total": len(self.phase2_questions),
+                    "text": first_question["question"],
+                    "emoji": first_question["emoji"]
+                })
+                
+                # Save state before returning
+                self.save_chat_state()
+                
                 return {
-                    "response": response,
+                    "response": (
+                        "Thank you for sharing your professional journey. Your growth so far sounds inspiring! "
+                        f"You seem to be in an ideal position to be a great {role}. "
+                        "I have a few more questions to know more about your style, so that we can build your content with authenticity."
+                    ),
+                    "next_message": formatted_question,
                     "completed": False,
-                    "phase": 1,
-                    "role": role
+                    "phase": 2,
+                    "role": role,
+                    "formatted": True
                 }
             else:
-                self.current_question_index += 1
                 next_question = self.phase1_questions[self.current_question_index]
-                response = f"\n\n{next_question}"
+                formatted_question = json.dumps({
+                    "number": next_question["number"],
+                    "total": len(self.phase1_questions),
+                    "text": next_question["question"],
+                    "emoji": next_question["emoji"]
+                })
                 
                 return {
-                    "response": response,
+                    "response": formatted_question,
                     "completed": False,
-                    "phase": 1
+                    "phase": 1,
+                    "formatted": True
                 }
-                
+                        
         except Exception as e:
             print(f"Error in phase 1: {e}")
             return {
-                "response": "I understand. Let's continue with our discussion.",
+                "response": "I apologize, but I encountered an error. Let's continue with our discussion.",
                 "completed": False,
                 "phase": 1
             }
 
     async def process_phase2_message(self, message: str, user_id: str) -> dict:
-        current_question = self.phase2_questions[self.current_question_index]
-        
-        if message.strip():
-            self.user_profile[current_question] = message
-            self.current_question_index += 1
-
         try:
-            if self.current_question_index < len(self.phase2_questions):
-                next_question = self.phase2_questions[self.current_question_index]
-                response = f"\n\n{next_question}"
-                
-                return {
-                    "response": response,
-                    "completed": False,
-                    "phase": 2
-                }
-            else:
+            print(f"Phase 2 - Current index: {self.current_question_index}")  # Debug log
+            
+            # Validate current index
+            if self.current_question_index >= len(self.phase2_questions):
+                print("Phase 2 complete - Generating content")  # Debug log
                 try:
                     content_schedule = await self.generate_content_schedule(user_id)
-                    final_response = "Thank you for sharing all that information! I've created your content schedule based on our discussion. As we grow together in this Chat Room, I will continue to convert your learning notes and stories from going through the recommended Achievement Plan, into influential growth journeys on the Strategic Content Calendar. "
-                    
-                    return {
-                        "response": final_response,
-                        "completed": True,
-                        "phase": 2,
-                        "schedule": content_schedule
-                    }
+                    if content_schedule:
+                        return {
+                            "response": "Thank you for sharing all that information! I've created your content schedule based on our discussion.",
+                            "completed": True,
+                            "phase": 2,
+                            "schedule": content_schedule
+                        }
+                    else:
+                        return {
+                            "response": "I apologize, but I encountered an issue creating your content schedule. Please try again.",
+                            "completed": False,
+                            "phase": 2
+                        }
                 except Exception as e:
                     print(f"Error generating content schedule: {e}")
-                    raise
+                    return {
+                        "response": "I apologize, but I encountered an error creating your schedule. Please try again.",
+                        "completed": False,
+                        "phase": 2
+                    }
+
+            # Process current question
+            current_question = self.phase2_questions[self.current_question_index]
+            
+            if message.strip():
+                self.user_profile[current_question["question"]] = message
+                print(f"Phase 2 - Saved answer for question {self.current_question_index}")  # Debug log
+                self.current_question_index += 1
+                print(f"Phase 2 - Incremented to question index {self.current_question_index}")  # Debug log
+                
+                # Save state after increment
+                self.save_chat_state()
+
+            # Check if we should move to content generation
+            if self.current_question_index >= len(self.phase2_questions):
+                print("Phase 2 - Moving to content generation")  # Debug log
+                try:
+                    content_schedule = await self.generate_content_schedule(user_id)
+                    if content_schedule:
+                        return {
+                            "response": "Thank you for sharing all that information! I've created your content schedule based on our discussion.",
+                            "completed": True,
+                            "phase": 2,
+                            "schedule": content_schedule
+                        }
+                except Exception as e:
+                    print(f"Error generating content schedule: {e}")
+                    return {
+                        "response": "I apologize, but I encountered an error creating your schedule. Please try again.",
+                        "completed": False,
+                        "phase": 2
+                    }
+            
+            # Get next question
+            next_question = self.phase2_questions[self.current_question_index]
+            formatted_question = {
+                "number": next_question["number"],
+                "total": len(self.phase2_questions),
+                "text": next_question["question"],
+                "emoji": next_question["emoji"]
+            }
+            
+            return {
+                "response": json.dumps(formatted_question),
+                "completed": False,
+                "phase": 2,
+                "formatted": True
+            }
+                
         except Exception as e:
             print(f"Error in phase 2: {e}")
+            import traceback
+            print(f"Full traceback: {traceback.format_exc()}")  # Add detailed error logging
             return {
-                "response": "Thank you for sharing. Let's continue discussing your content strategy.",
+                "response": "I apologize, but I encountered an unexpected error. Please try again.",
                 "completed": False,
                 "phase": 2
             }
-
+    
     def save_persona_input(self, user_id: str):
         from models import PersonaInputNew
-        from datetime import datetime
         
         try:
-            # Rollback any existing transaction
             self.db.rollback()
+            
+            profession_q = self.phase2_questions[0]["question"]
+            current_work_q = self.phase2_questions[1]["question"]
+            goal_q = self.phase2_questions[2]["question"]
+            audience_q = self.phase2_questions[3]["question"]
+            industry_q = self.phase2_questions[4]["question"]
+            favorite_posts_q = self.phase2_questions[5]["question"]
+            best_posts_q = self.phase2_questions[6]["question"]
+            posts_count_q = self.phase2_questions[7]["question"]
+            purpose_q = self.phase2_questions[8]["question"]
+            timeline_q = self.phase2_questions[9]["question"]
+            
+            try:
+                posts_to_create = int(self.user_profile.get(posts_count_q, '5'))
+                timeline = self.user_profile.get(timeline_q, '2 weeks')
+            except (ValueError, IndexError):
+                posts_to_create = 5
+                timeline = '2 weeks'
             
             persona_data = PersonaInputNew(
                 user_id=user_id,
-                profession=self.user_profile.get(self.phase2_questions[0], ''),
-                current_work=self.user_profile.get(self.phase2_questions[1], ''),
-                goal=self.user_profile.get(self.phase2_questions[2], ''),
-                journey=self.user_profile.get(self.phase2_questions[3], ''),
-                company_size=self.user_profile.get(self.phase2_questions[4], ''),
-                industry_target=self.user_profile.get(self.phase2_questions[5], ''),
-                target_type=self.user_profile.get(self.phase2_questions[6], ''),
-                favorite_posts=self.user_profile.get(self.phase2_questions[7], ''),
-                best_posts=self.user_profile.get(self.phase2_questions[8], ''),
-                posts_to_create=int(self.user_profile.get(self.phase2_questions[9], 5)),
-                post_purpose=self.user_profile.get(self.phase2_questions[10], ''),
-                timeline=self.user_profile.get(self.phase2_questions[11], '')
+                profession=self.user_profile.get(profession_q, ''),
+                current_work=self.user_profile.get(current_work_q, ''),
+                goal=self.user_profile.get(goal_q, ''),
+                journey=self.user_profile.get(audience_q, ''),
+                company_size=self.user_profile.get(audience_q, ''),
+                industry_target=self.user_profile.get(industry_q, ''),
+                target_type=self.user_profile.get(audience_q, ''),
+                favorite_posts=self.user_profile.get(favorite_posts_q, ''),
+                best_posts=self.user_profile.get(best_posts_q, ''),
+                posts_to_create=posts_to_create,
+                post_purpose=self.user_profile.get(purpose_q, ''),
+                timeline=timeline
             )
             
             self.db.add(persona_data)
@@ -315,19 +508,20 @@ class ChatbotLogic:
         except Exception as e:
             self.db.rollback()
             print(f"Error saving persona input: {e}")
+            import traceback
+            print(f"Full traceback: {traceback.format_exc()}")
             raise
         
     async def generate_content_schedule(self, user_id: str):
         try:
             persona_id = self.save_persona_input(user_id)
-            num_posts = int(self.user_profile.get(self.phase2_questions[9], 5))
-            timeline_weeks = int(self.user_profile.get(self.phase2_questions[11], '2').split()[0])
+            posts_to_create = int(self.user_profile.get(self.phase2_questions[7]["question"], 5))  
+            timeline_weeks = int(self.user_profile.get(self.phase2_questions[9]["question"], '2').split()[0])  # Changed index to 9
             
-            print(f"Generating {num_posts} posts over {timeline_weeks} weeks")
+            print(f"Generating {posts_to_create} posts over {timeline_weeks} weeks")
             
-            # Modified prompt for better structure
             prompt = f"""
-            Generate {num_posts} LinkedIn posts for a professional content calendar. Each post must follow this exact format:
+            Generate {posts_to_create} LinkedIn posts for a professional content calendar. Each post must follow this exact format:
 
             [POST START]
             Main content here...
@@ -335,12 +529,12 @@ class ChatbotLogic:
             [POST END]
 
             Professional Profile:
-            - Role: {self.user_profile.get(self.phase2_questions[0], '')}
-            - Company: {self.user_profile.get(self.phase2_questions[1], '')}
-            - Goal: {self.user_profile.get(self.phase2_questions[2], '')}
-            - Target Audience: {self.user_profile.get(self.phase2_questions[6], '')}
-            - Industry: {self.user_profile.get(self.phase2_questions[5], '')}
-            - Purpose: {self.user_profile.get(self.phase2_questions[10], '')}
+            - Role: {self.user_profile.get(self.phase2_questions[0]["question"], '')}
+            - Company: {self.user_profile.get(self.phase2_questions[1]["question"], '')}
+            - Goal: {self.user_profile.get(self.phase2_questions[2]["question"], '')}
+            - Target Audience: {self.user_profile.get(self.phase2_questions[6]["question"], '')}
+            - Industry: {self.user_profile.get(self.phase2_questions[4]["question"], '')}
+            - Purpose: {self.user_profile.get(self.phase2_questions[8]["question"], '')}
 
             Requirements for each post:
             1. Length: 200-400 characters per post
@@ -348,27 +542,22 @@ class ChatbotLogic:
             3. Add 2-3 relevant hashtags at the end
             4. Make each post unique and different
             5. Must use the [POST START] and [POST END] delimiters
-            6. Generate exactly {num_posts} posts
+            6. Generate exactly {posts_to_create} posts
 
             Begin generating posts:
             """
             
             response = self.model.generate_content(prompt).text
             print(f"AI Response length: {len(response)}")
-            posts = self.parse_generated_posts(response, num_posts, timeline_weeks)
+            posts = self.parse_generated_posts(response, posts_to_create, timeline_weeks)
             
-            # Verify posts before saving
-            valid_posts = {}
-            for i, post in posts.items():
-                if len(post["Post_content"].strip()) > 50:  # Minimum content length
-                    valid_posts[i] = post
-                else:
-                    print(f"Skipping invalid post {i}: Content too short")
+            valid_posts = {
+                str(i): post for i, post in posts.items()
+                if len(post["Post_content"].strip()) > 50
+            }
             
-            if len(valid_posts) < num_posts:
-                print("Not enough valid posts generated, regenerating missing posts...")
-                remaining_posts = num_posts - len(valid_posts)
-                # Generate additional posts for the missing ones
+            if len(valid_posts) < posts_to_create:
+                remaining_posts = posts_to_create - len(valid_posts)
                 additional_prompt = f"""
                 Generate {remaining_posts} more LinkedIn posts following the same format:
                 [POST START]
@@ -379,14 +568,12 @@ class ChatbotLogic:
                 additional_response = self.model.generate_content(additional_prompt).text
                 additional_posts = self.parse_generated_posts(additional_response, remaining_posts, timeline_weeks)
                 
-                # Add valid additional posts
                 start_index = len(valid_posts)
                 for i, post in additional_posts.items():
                     if len(post["Post_content"].strip()) > 50:
                         valid_posts[str(start_index)] = post
                         start_index += 1
             
-            # Save valid posts to database
             self.save_posts(persona_id, valid_posts)
             
             return {
@@ -396,6 +583,8 @@ class ChatbotLogic:
             
         except Exception as e:
             print(f"Error generating content schedule: {e}")
+            import traceback
+            print(f"Full traceback: {traceback.format_exc()}")  # Add detailed error logging
             raise
 
     def parse_generated_posts(self, ai_response: str, num_posts: int, timeline_weeks: int) -> dict:
